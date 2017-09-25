@@ -1,3 +1,3 @@
-Estava criando um formulário para cadastro de login de usuario contendo nome, email, senha e confirmação de senha, não consegui fazer executar ainda, pois tive problemas para instalar a gem 'bcrypt'. Por isso não consegui dar continuidade devido ao grande tempo gasto, sem sucesso, para instalar essa gem.
+Login usando conta Google
 
 Além disso, não entendi ainda como organizar os arquivos de um projeto colaborativo em rails, por isso criei uma pasta separada com o que eu tinha feito de código seguindo um tutorial da internet. De forma a nao bagunçar o que está funcionando.
