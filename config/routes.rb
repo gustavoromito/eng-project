@@ -1,5 +1,7 @@
-EngProject::Application.routes.draw do
-  root "pages#show", page: "home"
+### config/routes.rb
+Rails.application.routes.draw do
+ root 'pages#home'
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -55,4 +57,3 @@ EngProject::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
