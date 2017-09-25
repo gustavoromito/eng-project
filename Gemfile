@@ -12,6 +12,8 @@ group :production do
   gem 'pg'
 end
 
+gem 'listen'
+
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
