@@ -49,3 +49,6 @@ gem 'sass', '~> 3.4', '>= 3.4.22'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'bootstrap-sass'
+gem 'rails_12factor'
