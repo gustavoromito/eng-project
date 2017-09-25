@@ -15,15 +15,5 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <strong>Facebook:</strong>
-  <%= @user.facebook_id %>
-</p>
-
-<p>
-  <strong>Google:</strong>
-  <%= @user.google_id %>
-</p>
-
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170925013401) do
     t.datetime "updated_at"
     t.string   "provider"
     t.string   "uid"
+    t.string   "password"
   end
 
 end
