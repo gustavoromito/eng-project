@@ -12,8 +12,6 @@ group :production do
   gem 'pg'
 end
 
-gem 'listen'
-
 # Use SCSS for stylesheets
 gem 'sass-rails'
 
@@ -60,3 +58,10 @@ gem 'omniauth-facebook'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'tzinfo-data', '~> 1.2017', '>= 1.2017.2'
+
+gem 'listen', '~> 3.1', '>= 3.1.5'
+
+gem 'bootstrap-sass'
+gem 'rails_12factor'
