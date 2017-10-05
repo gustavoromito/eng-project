@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 20171005200234) do
     t.string "email_old", limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string "provider"
-    t.string "uid"
-    t.string "password"
+    t.string "provider", limit: 255
+    t.string "uid", limit: 255
+    t.string "password", limit: 255
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
