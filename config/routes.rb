@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+    
+    scope "/devise_scope" do
+  		devise_for :users
+	end
+	
 	resources :users
 
-  	root "pages#show", page: "home"
+  	root "pages#home"
 
   	get 'auth/facebook/callback', to: 'sessions#create'
   	get 'auth/failure', to: redirect('/')
