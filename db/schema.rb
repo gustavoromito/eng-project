@@ -10,17 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170925013401) do
+ActiveRecord::Schema.define(version: 20171006070527) do
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name", limit: 255
-    t.string "last_name", limit: 255
-    t.string "email", limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string "provider", limit: 255
-    t.string "uid", limit: 255
-    t.string "password", limit: 255
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "provider"
+    t.string "uid"
+    t.string "password"
   end
 
 end
