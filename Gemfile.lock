@@ -42,6 +42,11 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
     bcrypt (3.1.11)
+    autoprefixer-rails (7.1.4.1)
+      execjs
+    bootstrap-sass (3.3.7)
+      autoprefixer-rails (>= 5.2.1)
+      sass (>= 3.3.4)
     builder (3.2.3)
     capybara (2.15.1)
       addressable
@@ -163,6 +168,11 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (5.1.4)
       actionpack (= 5.1.4)
       activesupport (= 5.1.4)
@@ -225,6 +235,8 @@ GEM
     turbolinks-source (5.0.3)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2017.2)
+      tzinfo (>= 1.0.0)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
@@ -239,22 +251,25 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass
   coffee-rails
   cucumber-rails
   database_cleaner
   devise
   jbuilder
   jquery-rails
-  listen
+  listen (~> 3.1, >= 3.1.5)
   omniauth
   omniauth-facebook
   pg
   rails (= 5.1.4)
+  rails_12factor
   rspec-rails (~> 3.6)
   sass-rails
   sdoc
   sqlite3
   turbolinks
+  tzinfo-data (~> 1.2017, >= 1.2017.2)
   uglifier (>= 1.3.0)
 
 BUNDLED WITH
