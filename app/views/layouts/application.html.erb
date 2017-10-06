@@ -14,7 +14,8 @@
 	<% if alert %>
   		<p class="alert alert-danger"><%= alert %></p>
 	<% end %>	
-<%= yield %>
+	<%= yield %>
+
 
 	<p class="navbar-text pull-right">
 		<% if user_signed_in? %>

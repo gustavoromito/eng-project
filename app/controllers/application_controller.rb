@@ -17,8 +17,8 @@ class ApplicationController < ActionController::Base
       format.html { render :file => "#{Rails.root}/public/404", :layout => false, :status => :not_found }
     end
 
-  def after_sign_in_path_for(resource)
+  def after_sign_in_path_for(*)
     request.env['omniauth.origin'] || root_path
   end
-end
+  end
 end

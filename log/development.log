@@ -1720,3 +1720,252 @@ Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.0ms)
             FROM sqlite_temp_master
             WHERE name='index_views_on_email' AND type='index'
 [0m
+Started GET "/" for ::1 at 2017-10-06 16:03:39 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 230ms (Views: 219.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/devise_scope/users/sign_up" for ::1 at 2017-10-06 16:03:41 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/mulan/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/mulan/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered /home/mulan/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/registrations/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 68ms (Views: 38.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/devise_scope/users/sign_in" for ::1 at 2017-10-06 16:03:44 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/mulan/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/mulan/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/shared/_links.html.erb (2.5ms)
+  Rendered /home/mulan/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views/devise/sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:04:39 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:04:42 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:04:43 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:04:44 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 26ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:04:46 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:04:47 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 31ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:04:47 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:04:48 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 38ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:04:49 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:04:50 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:04:52 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:04:53 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:05:01 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:05:01 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:05:01 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/openModal" for ::1 at 2017-10-06 16:05:05 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/openModal"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+rack (2.0.3) lib/rack/handler/webrick.rb:86:in `service'
+/home/mulan/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/mulan/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/mulan/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+Started GET "/" for ::1 at 2017-10-06 16:05:10 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-10-06 16:06:58 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/mulan/eng-project/app/views"
+  * "/home/mulan/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views"
+):
+    17: 	<%= yield %>
+    18: 
+    19: 	<div class="container">
+    20:  		<%= render 'layouts/navbar' %>
+    21:  		<%= yield %>
+    22: 	</div>
+    23: 
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__1983353753085903675_70294234312720'
+app/controllers/pages_controller.rb:3:in `show'
+Started GET "/" for ::1 at 2017-10-06 16:07:03 -0300
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/mulan/eng-project/app/views"
+  * "/home/mulan/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views"
+):
+    17: 	<%= yield %>
+    18: 
+    19: 	<div class="container">
+    20:  		<%= render 'layouts/navbar' %>
+    21:  		<%= yield %>
+    22: 	</div>
+    23: 
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__1983353753085903675_70294238413020'
+app/controllers/pages_controller.rb:3:in `show'
+Started GET "/" for ::1 at 2017-10-06 16:35:15 -0300
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#show as HTML
+  Parameters: {"page"=>"home"}
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/_navbar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/mulan/eng-project/app/views"
+  * "/home/mulan/.rvm/gems/ruby-2.4.1/gems/devise-4.3.0/app/views"
+):
+    17: 	<%= yield %>
+    18: 
+    19: 	<div class="container">
+    20:  		<%= render 'layouts/navbar' %>
+    21:  		<%= yield %>
+    22: 	</div>
+    23: 
+  
+app/views/layouts/application.html.erb:20:in `_app_views_layouts_application_html_erb__3217493844880016665_27915000'
+app/controllers/pages_controller.rb:3:in `show'
