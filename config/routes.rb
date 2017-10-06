@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
+    
+    scope "/devise_scope" do
+  		devise_for :users
+	end
+	
 	resources :users
 
   	root "pages#show", page: "home"
