@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 	end
 	
 	resources :users
+  resources :user_interest, only: [:create]
 
   root "pages#home"
 

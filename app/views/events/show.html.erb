@@ -20,5 +20,19 @@
   <%= @event.end_time %>
 </p>
 
+<% if current_user %>
+
+<p>
+  <strong>Usuario logado:</strong>
+  <%= current_user.email %>
+</p>
+
+
+<%= link_to "ESTOU INTERESSADO!!!", {:controller => "user_interest", :action => "create", :format => "json", :user_id => current_user.id, :event_id => @event.id}, :method=>:post  %>
+<br><br>
+
+<% end %>
+
+
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
