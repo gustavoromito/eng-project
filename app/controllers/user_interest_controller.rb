@@ -8,9 +8,9 @@ class UserInterestController < ApplicationController
 	  respond_to do |format|
 
 	    if !UserInterest.create_interest(u, e)
-	      	format.json { render json: @interest.errors, status: :unprocessable_entity }
+	      	format.json { render json: 'Você já demonstrou interesse por esse evento', status: :unprocessable_entity }
 	    else
-	    	format.html { redirect_to e, notice: 'Interested was successfully created.' }
+	    	format.json { redirect_to e, notice: 'Interested was successfully created.' }
 	    end
 
 	  end

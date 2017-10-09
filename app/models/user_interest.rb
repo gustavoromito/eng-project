@@ -4,8 +4,8 @@ class UserInterest < ApplicationRecord
 
 	def self.create_interest(user, event)
 		interest = UserInterest.where(user: user, event: event)
-		return unless !interest
+		return unless !interest || interest.count == 0
 
-		UserInterest.create(user: user, event: event).save
+		UserInterest.create(user: user, event: event)
 	end
 end

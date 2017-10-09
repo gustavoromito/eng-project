@@ -33,6 +33,30 @@
 
 <% end %>
 
+<p>
+  <strong>Usuários interessados no Evento:</strong>
+</p><br>
+
+<table>
+  <thead>
+    <tr>
+      <th>User Id</th>
+      <th>Email</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event.interested_users.each do |int| %>
+      <tr>
+        <td><%= int.user.id %></td>
+        <td><%= int.user.email %></td>
+        <td><%= link_to 'Show', int.user %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table><br><br>
+
 
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
