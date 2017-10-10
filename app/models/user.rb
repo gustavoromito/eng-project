@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
   devise :omniauthable, :omniauth_providers => [:facebook]
 
+  has_many :interested_events, class_name: 'UserInterest', foreign_key: 'user_id'
+
 	def self.create_with_omniauth(auth)
 	  user = find_or_create_by(uid: auth.uid, provider:  auth.provider)
 	  user.email =  auth.info.email

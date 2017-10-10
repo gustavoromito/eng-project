@@ -20,5 +20,43 @@
   <%= @event.end_time %>
 </p>
 
+<% if current_user %>
+
+<p>
+  <strong>Usuario logado:</strong>
+  <%= current_user.email %>
+</p>
+
+
+<%= link_to "ESTOU INTERESSADO!!!", {:controller => "user_interest", :action => "create", :format => "json", :user_id => current_user.id, :event_id => @event.id}, :method=>:post  %>
+<br><br>
+
+<% end %>
+
+<p>
+  <strong>Usuários interessados no Evento:</strong>
+</p><br>
+
+<table>
+  <thead>
+    <tr>
+      <th>User Id</th>
+      <th>Email</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event.interested_users.each do |int| %>
+      <tr>
+        <td><%= int.user.id %></td>
+        <td><%= int.user.email %></td>
+        <td><%= link_to 'Show', int.user %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table><br><br>
+
+
 <%= link_to 'Edit', edit_event_path(@event) %> |
 <%= link_to 'Back', events_path %>
