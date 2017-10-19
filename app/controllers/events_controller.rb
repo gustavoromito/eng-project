@@ -7,6 +7,9 @@ class EventsController < ApplicationController
     @events = Event.all
   end
 
+  def call_format
+    format.json { render json: @event.errors, status: :unprocessable_entity }
+  end
   # GET /events/1
   # GET /events/1.json
   def show
@@ -32,7 +35,7 @@ class EventsController < ApplicationController
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
+        call_format()
       end
     end
   end
@@ -46,7 +49,7 @@ class EventsController < ApplicationController
         format.json { render :show, status: :ok, location: @event }
       else
         format.html { render :edit }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
+        call_format()
       end
     end
   end
