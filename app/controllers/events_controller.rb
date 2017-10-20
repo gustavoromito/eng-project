@@ -1,4 +1,4 @@
-class EventsController < ApplicationController
+class EventsController < CommonController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   # GET /events
@@ -40,26 +40,15 @@ class EventsController < ApplicationController
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update
-    respond_to do |format|
-      if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
-        format.json { render :show, status: :ok, location: @event }
-      else
-        format.html { render :edit }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
-      end
-    end
+    super(@event, 'Post atualizado com sucesso', event_params);
   end
 
-  # DELETE /events/1
-  # DELETE /events/1.json
+  # DELETE /posts/1
+  # DELETE /posts/1.json
   def destroy
-    @event.destroy
-    respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    super(@event, 'Post apagado com sucesso', events_url)
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
