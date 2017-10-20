@@ -70,3 +70,6 @@ gem 'bootstrap-sass'
 gem 'rails_12factor'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+
+#CarrierWave to handle upload for files
+gem 'carrierwave', '~> 1.0'
