@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Meus Eventos</h1>
+
+<% if @events.count == 0 %>
+    <h3> Você ainda não se interessou por nenhum evento.</h3>
+    <h3> Clique <a href="/events">aqui</a> para ver os eventos disponívelis</h3>
+<% else %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Start time</th>
+        <th>End time</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+      <tbody>
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= event.title %></td>
+          <td><%= event.description %></td>
+          <td><%= event.start_time %></td>
+          <td><%= event.end_time %></td>
+          <td><%= link_to 'Ver mais detalhes', event %></td>
+          <td>
+          
+          <%= link_to 'Não quero mais!', {:controller => "events", :action => "unsubscribe", :format => "json", :user_id => current_user.id, :event_id => event.id}, :method => :post, data: { confirm: "Tem certeza que não quer mais este evento? "} %>
+            
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% end %>
+
+<br>

@@ -7,6 +7,35 @@ class EventsController < CommonController
     @events = Event.all
   end
 
+  # GET /my_events
+  def my_events
+    @events = []
+
+    return unless current_user
+
+    @events = current_user.interested_events.map { |interest| interest.event }
+  end
+
+  def unsubscribe
+
+    u = User.find params[:user_id]
+    e = Event.find params[:event_id]
+
+    interest = UserInterest.where(user: u, event: e).first
+    return unless interest
+
+    respond_to do |format|
+
+      if !interest.destroy
+        format.json { render json: 'Você não possui interesse nesse evento.', status: :unprocessable_entity }
+      else
+        format.json { redirect_to e }
+      end
+
+    end
+
+  end
+
   # GET /events/1
   # GET /events/1.json
   def show
