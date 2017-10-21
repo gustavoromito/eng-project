@@ -31,6 +31,21 @@
     <%= form.datetime_select :end_time, id: :event_end_time %>
   </div>
 
+  <div class="field">
+    <%= form.label :Latitude %>
+    <%= form.text_field :latitude, id: :latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude, id: :event_longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Endereço %>
+    <%= form.text_field :address, id: :event_address %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
