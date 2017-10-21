@@ -73,3 +73,7 @@ gem 'momentjs-rails'
 
 #CarrierWave to handle upload for files
 gem 'carrierwave', '~> 1.0'
+
+gem 'gmaps4rails'
+
+gem 'geocoder'
