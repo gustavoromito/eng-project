@@ -87,6 +87,6 @@ class EventsController < CommonController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :description, :start_time, :end_time)
+      params.require(:event).permit(:title, :description, :start_time, :end_time, :latitude, :longitude, :address)
     end
 end
