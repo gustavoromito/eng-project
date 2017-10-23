@@ -13,24 +13,19 @@ $LOAD_PATH.unshift(File.dirname(vendored_cucumber_bin) + '/../lib') unless vendo
 begin
   require 'cucumber/rake/task'
 
-  namespace :cucumber do
-    Cucumber::Rake::Task.new({:ok => 'test:prepare'}, 'Run features that should pass') do |t|
+  def cucumberTakeTaskMethod(type, message, profile)
+      Cucumber::Rake::Task.new({type => 'test:prepare'}, message) do |t|
       t.binary = vendored_cucumber_bin # If nil, the gem's binary is used.
       t.fork = true # You may get faster startup if you set this to false
-      t.profile = 'default'
-    end
+      t.profile = profile
+  end
 
-    Cucumber::Rake::Task.new({:wip => 'test:prepare'}, 'Run features that are being worked on') do |t|
-      t.binary = vendored_cucumber_bin
-      t.fork = true # You may get faster startup if you set this to false
-      t.profile = 'wip'
-    end
+  namespace :cucumber do
+    cucumberTakeTaskMethod(:ok, 'Run features that should pass', 'default')
 
-    Cucumber::Rake::Task.new({:rerun => 'test:prepare'}, 'Record failing features and run only them if any exist') do |t|
-      t.binary = vendored_cucumber_bin
-      t.fork = true # You may get faster startup if you set this to false
-      t.profile = 'rerun'
-    end
+    cucumberTakeTaskMethod(:wip, 'Run features that are being worked on', 'wip')
+
+    cucumberTakeTaskMethod(:rerun, 'Record failing features and run only them if any exist', 'rerun')
 
     desc 'Run all features'
     task :all => [:ok, :wip]
