@@ -13,23 +13,23 @@ $LOAD_PATH.unshift(File.dirname(vendored_cucumber_bin) + '/../lib') unless vendo
 begin
   require 'cucumber/rake/task'
 
-  def cucumberTakeTaskMethod(type, message, profile)
+  def cucumberTakeTaskMethod(type, message, profile, vendored_cucumber_bin)
       Cucumber::Rake::Task.new({type => 'test:prepare'}, message) do |t|
       t.binary = vendored_cucumber_bin # If nil, the gem's binary is used.
       t.fork = true # You may get faster startup if you set this to false
       t.profile = profile
+    end
   end
 
   namespace :cucumber do
-    cucumberTakeTaskMethod(:ok, 'Run features that should pass', 'default')
+    cucumberTakeTaskMethod(:ok, 'Run features that should pass', 'default', vendored_cucumber_bin)
 
-    cucumberTakeTaskMethod(:wip, 'Run features that are being worked on', 'wip')
+    cucumberTakeTaskMethod(:wip, 'Run features that are being worked on', 'wip', vendored_cucumber_bin)
 
-    cucumberTakeTaskMethod(:rerun, 'Record failing features and run only them if any exist', 'rerun')
+    cucumberTakeTaskMethod(:rerun, 'Record failing features and run only them if any exist', 'rerun', vendored_cucumber_bin)
 
     desc 'Run all features'
     task :all => [:ok, :wip]
-  end
 
     task :statsetup do
       require 'rails/code_statistics'
