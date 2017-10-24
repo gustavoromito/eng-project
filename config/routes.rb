@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
     
   scope "/devise_scope" do
-    devise_for :users
+    devise_for :users, controllers: { registrations: "registrations"}
 	end
 	
 	resources :users
