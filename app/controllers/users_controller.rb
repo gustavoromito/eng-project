@@ -17,6 +17,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def commonCrud(render)
+    format.html { render action: render }
+    format.json { render json: @user.errors, status: :unprocessable_entity }    
+  end
   # GET /users/1/edit
   def edit
   end
@@ -31,8 +35,7 @@ class UsersController < ApplicationController
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render action: 'show', status: :created, location: @user }
       else
-        format.html { render action: 'new' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        commonCrud('new')
       end
     end
   end
@@ -45,8 +48,7 @@ class UsersController < ApplicationController
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edit' }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
+        commonCrud('edit')
       end
     end
   end
