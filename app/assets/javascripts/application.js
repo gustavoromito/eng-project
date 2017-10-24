@@ -16,6 +16,8 @@
 //= require_tree .
 //= require moment
 //= require fullcalendar
+//= require underscore
+//= require gmaps/google
 
 $(document).ready(function(){
   $('#calendar').fullCalendar({
