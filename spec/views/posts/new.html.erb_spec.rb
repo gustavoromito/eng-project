@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "posts/new", type: :view do
   before(:each) do
     assign(:post, Post.new(
-      :attachment => "MyString",
+      :avatar => "MyString",
       :content => "MyText",
       :user => nil
     ))
@@ -14,7 +14,7 @@ RSpec.describe "posts/new", type: :view do
 
     assert_select "form[action=?][method=?]", posts_path, "post" do
 
-      assert_select "input[name=?]", "post[attachment]"
+      assert_select "input[name=?]", "post[avatar]"
 
       assert_select "textarea[name=?]", "post[content]"
     end
