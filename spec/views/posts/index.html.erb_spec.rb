@@ -4,11 +4,11 @@ RSpec.describe "posts/index", type: :view do
   before(:each) do
     assign(:posts, [
       Post.create!(
-        :attachment => "Attachment",
+        :avatar => "Attachment",
         :content => "MyText"
       ),
       Post.create!(
-        :attachment => "Attachment",
+        :avatar => "Attachment",
         :content => "MyText"
       )
     ])

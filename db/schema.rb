@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171021192428) do
+ActiveRecord::Schema.define(version: 20171025220429) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20171021192428) do
     t.float "latitude"
     t.float "longitude"
     t.string "address"
+    t.string "image"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -30,6 +31,7 @@ ActiveRecord::Schema.define(version: 20171021192428) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "avatar"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
