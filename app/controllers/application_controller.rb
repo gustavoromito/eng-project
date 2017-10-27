@@ -21,4 +21,9 @@ class ApplicationController < ActionController::Base
     request.env['omniauth.origin'] || root_path
   end
   end
+  
+  def after_sign_in_path_for(_resource)
+      request.env['omniauth.origin'] || stored_location_for(resource) || :posts
+  end
+
 end
