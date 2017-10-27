@@ -1,36 +1,36 @@
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Buddy Me!</a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
 
-          <li class="active"><a href="/">Home</a></li>
-          <li><a href="/events">Eventos</a></li>
-
-          <% if current_user %>
-
-            <li><a href="/posts">Página de Status</a></li>
-            <li><a href="/my_events">Meus Eventos</a></li>
-
-          <% else %>
-
-            <li><a href=/devise_scope/users/sign_up>Sign-Up</a></li>
-            <li><a href="/devise_scope/users/sign_in">Sign-In</a></li>
-
-          <% end %>
-          
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          
-        </ul>
-      </div>
+<nav class="std-navbar navbar-inverse bg-primary">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-left" href="">
+          <img style="max-width:100px; margin-top: 10px; margin-right: -8px;" src="/assets/letter-b.png" width="30" height="30" alt="100">
+      </a>
+      <% if user_signed_in? %>
+      <%= link_to "BUDDY ME!", new_post_path, class: "navbar-brand" %>
+      <% else %>
+      <%= link_to "BUDDY ME!", root_url, class: "navbar-brand" %>
+      <% end %> 
     </div>
+    <div class="collapse navbar-collapse" id="navbar-top">
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li><a href="/posts">Perfil</a></li>
+          <li><a href="/my_events">Meus Eventos</a></li>
+          <li><a href="/events">Eventos</a></li>
+          <li><%= link_to('Sair', destroy_user_session_path, method: :delete) %></li>
+        <% else %>
+          <li><%= link_to 'Entrar', user_session_path %></li>
+          <li><%= link_to 'Cadastrar', new_user_registration_path %></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contato</a></li>
+        <% end %>   
+      </ul>
+    </div>
+  </div>
 </nav>

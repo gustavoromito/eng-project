@@ -5,6 +5,8 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import url(https://fonts.googleapis.com/css?family=Quantico|Reenie+Beanie);
+
 
  body {
     padding-top: 20px;
@@ -92,4 +94,48 @@
 
 .calendario {
   width: 70%;
+}
+
+.std-navbar {
+  background: #2E4372;
+  font-family: 'Quantico';
+  color: white !important;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color : #D6DFE4;
+}
+
+.navbar-inverse .navbar-brand {
+  color : #D6DFE4;
+  font-size: 1.6em !important;
+}
+
+.thumbnail   {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Reenie+Beanie';
+    font-size: 1.6em !important;
+}
+
+body {
+  font-family: 'Quantico';
+}
+
+.footer {
+    position: fixed;
+    left: 100;
+    bottom: 0;
+    width: 100%;
+    background-color: #2E4372;
+    color: white;
+    text-align: center;
 }
