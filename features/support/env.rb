@@ -5,7 +5,10 @@
 # files.
 
 require 'cucumber/rails'
+require 'capybara/cucumber'
+require 'selenium-webdriver'
 
+ 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
 # selectors in your step definitions to use the XPath syntax.
@@ -28,6 +31,7 @@ require 'cucumber/rails'
 #
 ActionController::Base.allow_rescue = false
 
+Selenium::WebDriver::Firefox::Binary.path='/usr/bin/firefox-beta-bin'
 # Remove/comment out the lines below if your app doesn't have a database.
 # For some databases (like MongoDB and CouchDB) you may need to use :truncation instead.
 begin
@@ -35,6 +39,11 @@ begin
 rescue NameError
   raise "You need to add database_cleaner to your Gemfile (in the :test group) if you wish to use it."
 end
+
+Capybara.default_driver = :selenium
+Capybara.default_wait_time = 20
+Capybara.javascript_driver = :webkit
+
 
 # You may also want to configure DatabaseCleaner to use different strategies for certain features and scenarios.
 # See the DatabaseCleaner documentation for details. Example:
