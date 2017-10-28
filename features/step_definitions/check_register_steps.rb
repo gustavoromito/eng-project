@@ -1,5 +1,4 @@
 # encoding: utf-8
-# !/usr/bin/ruby
 
 Quando /^eu vou para a página de cadastro$/ do
 	  visit '/devise_scope/users/sign_up'
@@ -16,6 +15,4 @@ end
 
 Então /^eu vou para a página principal logado na conta como novo usuário$/ do
 	expect(page).to have_content 'Welcome to BuddyME!'
-	# Se for através de browser(eg. Selenium) descomentar essa linha
-	#DatabaseCleaner.clean
 end

@@ -3,7 +3,6 @@
 
 Funcionalidade: Permitir um novo usuário fazer o cadastro
 
-@javascript
 Cenário: O usuário vai preencher os campos de email, senha e confirmação de senha para realizar o cadastro
 	Quando eu vou para a página de cadastro
 	E preencho o email:joao@usp.com.br, preencho a senha:"123456", preencho a confirmação de senha:"123456" e clico em "Cadastrar"
