@@ -36,11 +36,13 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
 
-#specs
-gem 'rspec-rails', '~> 3.6'
-gem 'cucumber-rails', :require => false
-# database_cleaner is not required, but highly recommended
-gem 'database_cleaner'
+group :test do
+	#specs
+	gem 'rspec-rails', '~> 3.6'
+	gem 'cucumber-rails', :require => false
+	# database_cleaner is not required, but highly recommended
+	gem 'database_cleaner'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -71,7 +73,7 @@ gem 'rails_12factor'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 
-#CarrierWave to handle upload for files
+# CarrierWave to handle upload for files
 gem 'carrierwave', '~> 1.0'
 
 gem 'gmaps4rails'
