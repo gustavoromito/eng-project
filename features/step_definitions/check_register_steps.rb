@@ -16,5 +16,6 @@ end
 
 Então /^eu vou para a página principal logado na conta como novo usuário$/ do
 	expect(page).to have_content 'Welcome to BuddyME!'
-	DatabaseCleaner.clean
+	# Se for através de browser(eg. Selenium) descomentar essa linha
+	#DatabaseCleaner.clean
 end

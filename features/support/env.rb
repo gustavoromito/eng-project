@@ -32,7 +32,8 @@ require 'database_cleaner'
 #
 ActionController::Base.allow_rescue = false
 
-Selenium::WebDriver::Firefox::Binary.path='/usr/bin/firefox-beta-bin'
+Selenium::WebDriver::Firefox::Binary.path= '/usr/bin/firefox-beta-bin'
+
 # Remove/comment out the lines below if your app doesn't have a database.
 # For some databases (like MongoDB and CouchDB) you may need to use :truncation instead.
 begin
