@@ -36,13 +36,15 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
 
-group :test do
+group :development, :test do
 	#specs
 	gem 'rspec-rails', '~> 3.6'
 	gem 'cucumber-rails', :require => false
-	# database_cleaner is not required, but highly recommended
-	gem 'database_cleaner'
+	gem 'factory_bot_rails'
 end
+
+# database_cleaner is not required, but highly recommended
+gem 'database_cleaner'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
