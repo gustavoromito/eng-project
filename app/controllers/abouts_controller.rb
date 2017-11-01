@@ -24,17 +24,7 @@ class AboutsController < ApplicationController
   # POST /abouts
   # POST /abouts.json
   def create
-    @about = About.new(about_params)
-
-    respond_to do |format|
-      if @about.save
-        format.html { redirect_to @about, notice: 'About was successfully created.' }
-        format.json { render :show, status: :created, location: @about }
-      else
-        format.html { render :new }
-        format.json { render json: @about.errors, status: :unprocessable_entity }
-      end
-    end
+    
   end
 
   # PATCH/PUT /abouts/1
