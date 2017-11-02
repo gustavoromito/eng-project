@@ -45,7 +45,7 @@ class EventsController < CommonController
   def new
 
     @event = Event.new
-    @categories = Category.all.map{ |c| [c.name, c.id] }
+   
 
   end
 
