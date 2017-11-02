@@ -18,7 +18,9 @@
 
   <tbody>
     <% @events.each do |event| %>
+    <a href="/events/<%= event.id %>"
       <tr>
+        <td><%= image_tag event.image %></td>
         <td><%= event.title %></td>
         <td><%= event.description %></td>
         <td><%= event.start_time %></td>

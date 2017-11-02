@@ -5,8 +5,8 @@ RSpec.describe User, type: :model do
   subject {
   	User.new(
   		email: "valid_email@test.com",
-  		password: "valid_pass123",
-  		first_name: "Nome_Teste")
+  		password: "valid_pass123"
+      )
   }
 
   it "é válido se o usuário é válido, possui os campos básicos de auth" do
@@ -21,15 +21,6 @@ RSpec.describe User, type: :model do
   it "não é válido sem uma senha" do
   	subject.password = nil
   	expect(subject).to_not be_valid
-  end
-
-  it "não é válido sem um nome" do
-  	subject.first_name = nil
-  	expect(subject).to_not be_valid
-  end
-
-  it "é válido sem um sobrenome" do
-  	expect(subject).to be_valid
   end
 
 end

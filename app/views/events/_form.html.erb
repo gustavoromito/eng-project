@@ -12,6 +12,10 @@
     </div>
   <% end %>
 
+  <div class="select" >
+    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Selecione uma Categoria") %>
+  </div>
+
   <div class="form-group">
     <%= form.file_field :image %>
   </div>
