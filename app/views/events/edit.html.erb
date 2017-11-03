@@ -14,7 +14,7 @@
   <% end %>
 
   <div class="select" >
-    <%= form.select :category_id, @categories %>
+    <%= form.select :category_id, Category.all.map{ |c| [c.name, c.id] } %>
   </div>
 
   <div class="form-group">

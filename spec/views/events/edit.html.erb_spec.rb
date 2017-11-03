@@ -3,13 +3,6 @@ require 'rails_helper'
 RSpec.describe "events/edit", type: :view do
   before(:each) do
 
-    Category.new(
-      :name => "Type1",
-      :id => 1
-    )
-
-    @categories = Category.all.map{ |c| [c.name, c.id] }
-
     @event = assign(:event, Event.create!(
       :title => "MyString",
       :description => "MyText"

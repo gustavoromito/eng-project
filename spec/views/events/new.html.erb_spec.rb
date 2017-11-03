@@ -3,12 +3,6 @@ require 'rails_helper'
 RSpec.describe "events/new", type: :view do
   before(:each) do
 
-    Category.new(
-      :name => "Type1",
-      :id => 1)
-
-    @categories = assign(:category, Category.all)
-
     assign(:event, Event.new(
       :title => "MyString",
       :description => "MyText"

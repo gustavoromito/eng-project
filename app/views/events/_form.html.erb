@@ -1,5 +1,5 @@
 
-<%= form_with(model: event, local: true) do |form| %>
+<%= form_with(model: event, local: true, html: { multipart: true })   do |form| %>
   <% if event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(event.errors.count, "error") %> prohibited this event from being saved:</h2>
@@ -13,10 +13,11 @@
   <% end %>
 
   <div class="select" >
-    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Selecione uma Categoria") %>
+    <%= select_tag(:category_id, options_for_select(Category.all.map{ |c| [c.name, c.id] }), :prompt => "Selecione uma Categoria") %>
   </div>
 
   <div class="form-group">
+    <label>Imagem</label>
     <%= form.file_field :image %>
   </div>
 

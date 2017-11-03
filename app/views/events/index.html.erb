@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Events</h1>
+<h1>Eventos</h1>
+<%= render 'events/navbar' %>
 
 <table>
   <thead>
@@ -18,9 +19,9 @@
 
   <tbody>
     <% @events.each do |event| %>
-    <a href="/events/<%= event.id %>"
+    <a href="/events/<%= event.id %>">
       <tr>
-        <td><%= image_tag event.image %></td>
+        <%= image_tag event.image_url(:thumb) %>
         <td><%= event.title %></td>
         <td><%= event.description %></td>
         <td><%= event.start_time %></td>
@@ -38,6 +39,7 @@
 
 <br>
 
+<div id="calendar" class="calendario"></div>
 <%= link_to 'New Event', new_event_path %>
 
-<div id="calendar" class="calendario"></div>
+

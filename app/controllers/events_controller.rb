@@ -4,7 +4,12 @@ class EventsController < CommonController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    if params[:category].blank?
+      @events = Event.all
+    else
+      @category_id = Category.find_by(name: params[:category]).id
+      @events = Event.where(:category_id => @category_id).order("created_at DESC")
+    end
   end
 
   # GET /my_events
@@ -43,15 +48,12 @@ class EventsController < CommonController
 
   # GET /events/new
   def new
-
     @event = Event.new
-   
-
   end
 
   # GET /events/1/edit
   def edit
-    @categories = Category.all.map{ |c| [c.name, c.id] }
+
   end
 
   # POST /events
