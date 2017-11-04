@@ -40,7 +40,8 @@ group :development, :test do
 	#specs
 	gem 'rspec-rails', '~> 3.6'
 	gem 'cucumber-rails', :require => false
-	gem 'factory_bot_rails'
+	gem "factory_bot_rails", "~> 4.0"
+	gem 'shoulda-matchers', '~> 3.1' 
 end
 
 # database_cleaner is not required, but highly recommended
