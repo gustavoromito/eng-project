@@ -26,7 +26,6 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-        <td><%= post.avatar %></td>
         <td><%= post.content %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>

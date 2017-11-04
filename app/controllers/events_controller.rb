@@ -4,7 +4,12 @@ class EventsController < CommonController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    if params[:category].blank?
+      @events = Event.all
+    else
+      @category_id = Category.find_by(name: params[:category]).id
+      @events = Event.where(:category_id => @category_id).order("created_at DESC")
+    end
   end
 
   # GET /my_events
@@ -48,12 +53,18 @@ class EventsController < CommonController
 
   # GET /events/1/edit
   def edit
+
   end
 
   # POST /events
   # POST /events.json
   def create
+
     @event = Event.new(event_params)
+    
+    if(@event.category_id == nil)
+      @event.category_id = 1
+    end
 
     respond_to do |format|
       if @event.save
@@ -69,6 +80,8 @@ class EventsController < CommonController
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update
+
+    @event.category_id = params[:category_id]
     super(@event, 'Post atualizado com sucesso', event_params);
   end
 
@@ -87,6 +100,6 @@ class EventsController < CommonController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:image, :title, :description, :start_time, :end_time, :latitude, :longitude, :address)
+      params.require(:event).permit(:image, :title, :description, :start_time, :end_time, :latitude, :longitude, :address, :category_id)
     end
 end

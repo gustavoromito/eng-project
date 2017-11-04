@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   devise :omniauthable, :omniauth_providers => [:facebook]
+  validates_presence_of :email, :password
 
   has_many :interested_events, class_name: 'UserInterest', foreign_key: 'user_id'
 

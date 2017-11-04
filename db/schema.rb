@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171025220429) do
+ActiveRecord::Schema.define(version: 20171102122905) do
+
+  create_table "abouts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.string "title"
@@ -23,6 +34,7 @@ ActiveRecord::Schema.define(version: 20171025220429) do
     t.float "longitude"
     t.string "address"
     t.string "image"
+    t.integer "category_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -31,6 +43,7 @@ ActiveRecord::Schema.define(version: 20171025220429) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
     t.string "avatar"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
@@ -45,11 +58,11 @@ ActiveRecord::Schema.define(version: 20171025220429) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "email_old"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "first_name", limit: 255
+    t.string "last_name", limit: 255
+    t.string "email_old", limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string "provider"
     t.string "uid"
     t.string "password"

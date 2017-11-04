@@ -1,0 +1,9 @@
+<ul class="container">
+  <ul class=" navbar navbar-right">Categorias
+    <% Category.all.each do |category| %>
+    <li>
+      <a><%= link_to category.name, events_path(category: category.name)%></a>
+    </li>
+    <% end %>
+  </ul>
+</ul>

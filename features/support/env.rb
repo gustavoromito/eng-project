@@ -31,6 +31,8 @@ require 'database_cleaner'
 #
 ActionController::Base.allow_rescue = false
 
+World(FactoryBot::Syntax::Methods)
+
 #Selenium::WebDriver::Firefox::Binary.path= '/usr/bin/bin/firefox-beta-bin'
 
 # Remove/comment out the lines below if your app doesn't have a database.
