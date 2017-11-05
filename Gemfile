@@ -79,8 +79,13 @@ gem 'momentjs-rails'
 # CarrierWave to handle upload for files
 gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
+#DESCOMENTAR ESSA GEM
 gem "rmagick"
 
 gem 'gmaps4rails'
 
 gem 'geocoder'
+
+#Gabriel - autenticacao google
+gem "omniauth-google-oauth2"
+gem 'coffee-script-source', '1.8.0'
