@@ -80,7 +80,7 @@ gem 'momentjs-rails'
 gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
 #DESCOMENTAR ESSA GEM
-#gem "rmagick"
+gem "rmagick"
 
 gem 'gmaps4rails'
 
