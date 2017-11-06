@@ -20,4 +20,10 @@ class User < ActiveRecord::Base
 	  user
 	end
 
+	def full_name
+		user_name = first_name
+		user_name += " " + last_name if last_name
+		user_name || 'N/A'
+	end
+
 end
