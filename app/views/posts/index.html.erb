@@ -1,40 +1,120 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<style>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+#profile-container {
+  padding: 16px;
+  height: 100%; 
+  background: #fff;
+}
 
-  <div class="jumbotron">
- <h1>Welcome to BuddyME!</h1>
- <a href="#openModal">Open Modal</a>
- <div id="openModal" class="modalDialog">
-  <div>
-    <a href="#close" title="Close" class="close">X</a>
-    <h2>Encontro no Sandubão</h2>
-      <div class="imagem-evento"></div>
-    <p>Teste.</p>
-    <p>Participantes: 6</p>
-      <button type="button" class="btn btn-default botao-participar" href="#" >Quero participar!</button>
+#profile-img {
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+}
+
+#posts-table tr {
+  margin-bottom: 16px;
+  display: block;
+}
+
+#posts-table td {
+  padding: 16px;
+  background: #e2e2e2;
+  border-radius: 16px;
+}
+
+.post-timestamp {
+  font-size: 9px;
+  color: #969696;
+}
+
+#events-table td, #events-table th {
+  padding: 0px 25px;
+}
+
+</style>
+
+<div style="display: inline-block; float: left; width: 20%; margin-right: 16px">
+
+  <div id="profile-container">
+    <img id="profile-img" src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png" width="112" height="112">
+
+    <h4><strong>Nome</strong>: <%current_user.full_name%></h4>
+    <h5><strong>Email</strong>: <%current_user.email%></h5>
+
   </div>
- </div>
 
-  <tbody>
-    <% @posts.each do |post| %>
+</div>
+
+<div style="display: inline-block; float: right; width: calc(80% - 16px);">
+
+  <% if current_user && current_user.interested_events.count > 0 %>
+
+    <h1>Eventos</h1>
+
+    <table id="events-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Start time</th>
+          <th>End time</th>
+        </tr>
+      </thead>
+        <tbody>
+        <% current_user.interested_events.each do |i| %>
+          <tr>
+            <td><%= i.event.title %></td>
+            <td><%= i.event.description %></td>
+            <td><%= i.event.start_time %></td>
+            <td><%= i.event.end_time %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+  <% end %>
+
+  <h1>Posts</h1>
+  <%= link_to 'New Post', new_post_path %>
+
+  <table id="posts-table">
+    <thead>
       <tr>
-        <td><%= post.content %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <div class="jumbotron" style="display: none">
+   <h1>Welcome to BuddyME!</h1>
+   <a href="#openModal">Open Modal</a>
+   <div id="openModal" class="modalDialog">
+    <div>
+      <a href="#close" title="Close" class="close">X</a>
+      <h2>Encontro no Sandubão</h2>
+        <div class="imagem-evento"></div>
+      <p>Teste.</p>
+      <p>Participantes: 6</p>
+        <button type="button" class="btn btn-default botao-participar" href="#" >Quero participar!</button>
+    </div>
+   </div>
 
-<%= link_to 'New Post', new_post_path %>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.content %><span class="post-timestamp"> <%= post.created_at.strftime('%d/%m/%Y')
+ %></span></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+</div>
+
+
