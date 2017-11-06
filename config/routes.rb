@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     
   scope "/devise_scope" do
   #  devise_for :users, controllers: { registrations: "registrations"}
-  ###GABRIEL
+    ###GABRIEL
     devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 	end
 	
@@ -23,8 +23,9 @@ Rails.application.routes.draw do
 
   get 'my_events', to: 'events#my_events'
 
-  #get 'auth/facebook/callback', to: 'sessions#create'
-  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/facebook/callback', to: 'sessions#create'
+  get 'auth/google_oauth2/callback', to: 'sessions#create'
+  #get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   
   get 'signout', to: 'sessions#destroy', as: 'signout'
