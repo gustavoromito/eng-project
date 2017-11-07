@@ -84,3 +84,7 @@ gem "rmagick"
 gem 'gmaps4rails'
 
 gem 'geocoder'
+
+#Gabriel
+gem 'coffee-script-source', '1.8.0'
+gem 'acts_as_commentable'
