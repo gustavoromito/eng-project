@@ -35,6 +35,18 @@ class PostsController < CommonController
     end
   end
 
+def upvote 
+  @post = Post.find(params[:id])
+  @post.upvote_by current_user
+  redirect_to :back
+end  
+
+def downvote
+  @post = Post.find(params[:id])
+  @post.downvote_by current_user
+  redirect_to :back
+end
+
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update

@@ -56,7 +56,7 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -79,7 +79,6 @@ gem 'momentjs-rails'
 # CarrierWave to handle upload for files
 gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
-gem "rmagick"
 
 gem 'gmaps4rails'
 

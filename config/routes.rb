@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :abouts
-  resources :posts
   
   resources :events do
     post 'unsubscribe', to: 'events#unsubscribe'
@@ -12,6 +11,13 @@ Rails.application.routes.draw do
 	
 	resources :users
   resources :user_interest, only: [:create]
+
+  resources :posts do 
+  member do
+    put "like", to: "links#upvote"
+    put "dislike", to: "links#downvote"
+  end
+end
 
   root "pages#home"
 
