@@ -79,7 +79,7 @@ gem 'momentjs-rails'
 # CarrierWave to handle upload for files
 gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
-gem "rmagick"
+#gem "rmagick"
 
 gem 'gmaps4rails'
 
