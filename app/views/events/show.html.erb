@@ -2,57 +2,25 @@
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
-<p id="notice"><%= notice %></p>
-  <%= image_tag @event.image %>
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
-
-<p><strong>Categoria:</strong>
- <%=  @event.category.name %>
-</p>
-
-<p>
-  <strong>Start time:</strong>
-  <%= @event.start_time %>
-</p>
-
-<p>
-  <strong>End time:</strong>
-  <%= @event.end_time %>
-</p>
-
-<p>
-  <strong>Latitude:</strong>
-  <%= @event.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @event.longitude %>
-</p>
-
-<p>
-  <strong>Endereço:</strong>
-  <%= @event.address %>
-</p>
-
-<% if current_user %>
-
-<p>
-  <strong>Usuario logado:</strong>
-  <%= current_user.email %>
-</p>
-
-
-<%= link_to "ESTOU INTERESSADO!!!", {:controller => "user_interest", :action => "create", :format => "json", :user_id => current_user.id, :event_id => @event.id}, :method=>:post  %>
 <br><br>
+
+<div class="card mb-3" align="center">
+  <%= image_tag @event.image, class:"card-img-top"%>
+    <div class="card-body">
+      <h4 class="card-title"><strong><%= @event.title %>(<%= @event.category.name %>)</strong></h4>
+      <p> <strong>Start time:</strong> <%= @event.start_time %> 
+          <strong>End time:</strong> <%= @event.end_time %>
+      </p>
+       <p class="card-text"> <%= @event.description %></p>
+       <p><%= @event.address %> </p>
+       <% if current_user %>
+        <%= link_to "ESTOU INTERESSADO!!!", {:controller => "user_interest", :action => "create", :format => "json", :user_id => current_user.id, :event_id => @event.id}, :method=>:post, class:"btn btn-primary"  %>
+    </div>
+  </div>
+</div>
+
+
+
 
 <% end %>
 
