@@ -10,7 +10,8 @@ class PostsController < CommonController
   # GET /posts/1
   # GET /posts/1.json
   def show
-
+    @post = Post.find_by(id: params[:id])
+    @comments = @post.comments.all
   end
 
   # GET /posts/new
