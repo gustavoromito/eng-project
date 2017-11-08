@@ -83,3 +83,5 @@ gem "mini_magick"
 gem 'gmaps4rails'
 
 gem 'geocoder'
+
+gem 'acts_as_commentable'
