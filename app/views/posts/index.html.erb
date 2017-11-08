@@ -109,8 +109,9 @@
     <tbody>
       <% @posts.each do |post| %>
         <tr>
-          <td><%= post.content %><span class="post-timestamp"> <%= post.created_at.strftime('%d/%m/%Y')
- %></span></td>
+          <td><%= post.content %><span class="post-timestamp"> <%= post.created_at.strftime('%d/%m/%Y')%>
+          <%= link_to 'Mostrar', post %>
+          </span></td>
         </tr>
       <% end %>
     </tbody>

@@ -1,5 +1,18 @@
 <p id="notice"><%= notice %></p>
 
+<style>
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 12px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+</style>
+
 <p>
   <strong>Conteúdo:</strong>
   <%= @post.content %>
@@ -11,8 +24,10 @@
 <div class="comment-section">
   <%= form_tag create_comment_path, method: "post" do %>
     <%= hidden_field_tag "id", @post.id %>
-      <%= text_area_tag :comment %>
-      <%= submit_tag "Submit" %>
+      <div>
+        <%= text_area_tag :comment %>
+      </div>
+      <button class="button" submit_tag>Comentar</button>
     <% end %>
 </div>
 <div class="comment_list">
