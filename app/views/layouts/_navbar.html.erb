@@ -12,7 +12,7 @@
           <img style="max-width:100px; margin-top: 10px; margin-right: -8px;" src="/assets/letter-b.png" width="30" height="30" alt="100">
       </a>
       <% if user_signed_in? %>
-      <%= link_to "BUDDY ME!", new_post_path, class: "navbar-brand" %>
+      <%= link_to "BUDDY ME!", posts_path, class: "navbar-brand" %>
       <% else %>
       <%= link_to "BUDDY ME!", root_url, class: "navbar-brand" %>
       <% end %> 
