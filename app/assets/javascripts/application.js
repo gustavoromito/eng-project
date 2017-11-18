@@ -18,6 +18,7 @@
 //= require fullcalendar
 //= require underscore
 //= require gmaps/google
+//= require social-share-button
 
 $(document).ready(function(){
   $('#calendar').fullCalendar({

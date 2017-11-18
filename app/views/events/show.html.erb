@@ -53,6 +53,8 @@
 <%= link_to "ESTOU INTERESSADO!!!", {:controller => "user_interest", :action => "create", :format => "json", :user_id => current_user.id, :event_id => @event.id}, :method=>:post  %>
 <br><br>
 
+<%= social_share_button_tag('Tenho interesse no evento: ' + @event.title + '. Vamos comigo!') %>
+
 <% end %>
 
 <div style='width: 800px;'>
