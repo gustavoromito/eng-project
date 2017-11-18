@@ -7,6 +7,14 @@ class ReviewsController < ApplicationController
 
 	def create
 		@review = Review.new(review_params)
+		@review.event_id = @event.id
+		@review.user_id = current_user.id
+
+		if @review.save
+			redirect_to event_path(@event)
+		else
+			render 'new'
+		end
 	end
 
 	private
