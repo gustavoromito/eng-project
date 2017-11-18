@@ -4,5 +4,7 @@ FactoryBot.define do
     		"person#{n}@example.com"
   		end
 		password "t123456"
+		first_name "FName"
+		last_name "LName"
 	end
 end

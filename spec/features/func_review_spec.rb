@@ -1,16 +1,24 @@
 # TDD: Implementar funcionalidade de Review
 # Feature Test
 
-require 'rails_helper.rb'
+require 'rails_helper'
+require 'test_helper'
 
-feature "avaliação de evento" do 
+feature "avaliação de evento", type: :feature do 
 
-	before do
-		# Instâncias de Usuário, Evento, e Interesse do Usuário
-		user_interest = FactoryBot.create(:user_interest)
+	before(:each) do
+		# Instâncias de Usuário, Evento
+    	current_user = FactoryBot.create(:user)
+    	sign_in(current_user)
 
-		# Visitar a página show do evento que o usuário possui interesse
-		visit "/events/#{user_interest.event.id}"
+    	test_event = FactoryBot.create(:event)
+
+		# Visitar a página de meus eventos
+		visit "/events/#{test_event.id}"
+		# Criação de Instância de User_Interest
+		click_link "ESTOU INTERESSADO!!!"
+
+		visit "/my_events"
 	end
 
 	# Cenário: Analisar o evento com um rate e um comentário
@@ -26,6 +34,8 @@ feature "avaliação de evento" do
 
 	# Finaliza redirecionando para a página do evento e mostrando o comentário
 	it "Mostra o comentário e a nota do review na página do evento" do
+		visit "/my_events"
+		click_link 'Ver mais detalhes'
 		expect(page).to have_text("Muito Bom!")
 	end
 	

@@ -27,7 +27,7 @@ class PostsController < CommonController
   # POST /posts.json
   def create
     @post = Post.new(post_params) do |post|
-      post.user = current_user
+    post.user = current_user
     end
     if @post.save
       redirect_to root_path
