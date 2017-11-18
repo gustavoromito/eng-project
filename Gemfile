@@ -41,7 +41,7 @@ group :development, :test do
 	gem 'rspec-rails', '~> 3.6'
 	gem 'cucumber-rails', :require => false
 	gem "factory_bot_rails", "~> 4.0"
-	gem 'shoulda-matchers', '~> 3.1' 
+	gem 'shoulda-matchers', '~> 3.1'
 	gem 'rspec-activemodel-mocks'
 end
 
@@ -86,3 +86,5 @@ gem 'gmaps4rails'
 gem 'geocoder'
 
 gem 'acts_as_commentable'
+
+gem 'social-share-button'
