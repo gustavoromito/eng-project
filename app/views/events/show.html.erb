@@ -50,7 +50,6 @@
   <%= current_user.email %>
 </p>
 
-
 <%= link_to "ESTOU INTERESSADO!!!", {:controller => "user_interest", :action => "create", :format => "json", :user_id => current_user.id, :event_id => @event.id}, :method=>:post  %>
 <br><br>
 
@@ -79,6 +78,12 @@ handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
   handler.fitMapToBounds();
 });
 </script>
+
+<p>
+  <strong> Avaliações do Evento:</strong>
+</p><br>
+
+<%= render @event.reviews %>
 
 <p>
   <strong>Usuários interessados no Evento:</strong>

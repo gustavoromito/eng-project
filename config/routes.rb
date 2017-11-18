@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   
   resources :events do
     post 'unsubscribe', to: 'events#unsubscribe'
+    resources :reviews
   end
     
   scope "/devise_scope" do

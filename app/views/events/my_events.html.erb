@@ -36,7 +36,12 @@
           <%= link_to 'Não quero mais!', {:controller => "events", :action => "unsubscribe", :format => "json", :user_id => current_user.id, :event_id => event.id}, :method => :post, data: { confirm: "Tem certeza que não quer mais este evento? "} %>
 
           </td>
+
+          <td> 
+            <%= link_to 'Avaliar Evento', new_event_review_path(event)%>
+          </td>
         </tr>
+
       <% end %>
     </tbody>
   </table>
