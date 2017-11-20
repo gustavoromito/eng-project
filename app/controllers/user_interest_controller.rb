@@ -1,8 +1,8 @@
 class UserInterestController < ApplicationController
 
 	def create
-	  u = User.find params[:user_id]
-	  e = Event.find params[:event_id]
+	  u = User.find_by params[:user_id]
+	  e = Event.find_by params[:event_id]
 
 	  @interest = UserInterest.new(user: u, event: e)
 	  respond_to do |format|
