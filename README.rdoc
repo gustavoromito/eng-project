@@ -6,7 +6,9 @@
 
 === Nome do Projeto: Buddy Me!
 
-Heroku Application Link: https://eng-project.herokuapp.com/
+Heroku Application Link: https://buddy-me.herokuapp.com/
+
+Link Pivotal Tracker: https://www.pivotaltracker.com/n/projects/2114849
 
 <b>Descrição:</b> Rede Social destinada a pessoas que desejam compartilhar experiências baseada em convites para espaços ou atividades de interesse comum. A proposta é que os usuários cadastrem atividades, geralmente realizada em grupo de pessoas proximas como amigos e familiares, para compartilharem essa experiência com novas pessoas.
 
