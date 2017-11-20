@@ -138,4 +138,50 @@ RSpec.describe EventsController, type: :controller do
     end
   end
 
+  describe 'GET #my_events' do
+
+    let(:user) { create(:user) }
+
+    context 'when user is logged in' do
+
+      it 'returns an empty array of events' do
+        get :my_events, params: {}
+        expect(response).to be_success
+      end
+
+    end
+
+  end
+
+  describe 'POST #unsubscribe' do
+
+    let(:user) { create(:user) }
+    let(:event) { create(:event) }
+
+    context 'with valid params' do
+
+      before do
+        UserInterest.create_interest(user, event)
+      end
+
+      it 'destroies user interest for user' do
+        expect {
+          post :unsubscribe, params: { user_id: user.id, event_id: event.id}, format: 'json'
+        }.to change(UserInterest, :count).by(-1)  
+      end
+
+    end
+
+    context 'when user has not shown interest before' do
+
+      it 'destroies user interest for user' do
+        expect {
+          post :unsubscribe, params: { user_id: user.id, event_id: event.id}, format: 'json'
+        }.to change(UserInterest, :count).by(0)
+      end
+
+    end
+
+  end
+
 end
