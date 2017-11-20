@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # Criando as Categorias
-category_sports = Category.create(name: "Esportes")
+categories = Category.create([{name: "Restaurante"}, {name: "Baladinha"}, {name: "Ar Livre"}, {name: "Artes"}, {name: "Jogos online"})])
