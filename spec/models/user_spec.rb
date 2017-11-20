@@ -23,4 +23,54 @@ RSpec.describe User, type: :model do
   	expect(subject).to_not be_valid
   end
 
+  describe '#full_name' do
+
+    context 'when user does not have neither first_name nor last_name' do
+
+      before do
+        subject.first_name = nil
+        subject.last_name = nil
+      end 
+
+      it 'returns N/A' do
+        expect(subject.full_name).to eq('N/A')
+      end
+
+    end
+
+    context 'when user does have only first_name' do
+
+      before do
+        subject.first_name = 'Nome'
+        subject.last_name = nil
+      end 
+
+      it 'returns only first_name' do
+        expect(subject.full_name).to eq(subject.first_name)
+      end
+
+    end
+
+    context 'when user does have either first_name and last_name' do
+
+      before do
+        subject.first_name = 'Nome'
+        subject.last_name = 'Sobrenome'
+      end 
+
+      it 'returns both first and last name' do
+        expect(subject.full_name).to eq("Nome Sobrenome")
+      end
+
+    end
+
+  end
+
+
+  def full_name
+    user_name = first_name
+    user_name += " " + last_name if last_name
+    user_name || 'N/A'
+  end
+
 end
