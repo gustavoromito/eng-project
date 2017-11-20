@@ -22,10 +22,10 @@ Então /^o usuário vai para a página do evento para "(.*?)"$/ do |eve|
   	visit "/events/1"
 end
 
-E usuario clica no botao "ssb-icon ssb-twitter" do
+E /^usuario clica em "ssb-icon ssb-twitter"$/ do
   click_button('ssb-icon ssb-twitter')
 end
 
-E o link possui target "_blank" do
+E /^o link possui target "_blank"$/ do
   it { should have_selector( 'a[target="_blank"]' ) }
 end

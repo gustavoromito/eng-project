@@ -9,5 +9,5 @@ Cenário: Abrir link em blank
 	E preencher os campos latitude, longitude e endereço com: latitude: -23.5874162, longitude: -46.6576336, endereco: "Parque Ibirapuera"
 	E clicar em "Create Event"
 	Então o usuário vai para a página do evento para "eventos/1"
-  E usuario clica no botao "ssb-icon ssb-twitter"
+  E usuario clica em "ssb-icon ssb-twitter"
   E o link possui target "_blank"
