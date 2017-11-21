@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :abouts
   resources :posts
-  
+  resources :friends
+
   resources :events do
     post 'unsubscribe', to: 'events#unsubscribe'
     resources :reviews
