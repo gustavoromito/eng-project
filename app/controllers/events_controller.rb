@@ -4,12 +4,12 @@ class EventsController < CommonController
   # GET /events
   # GET /events.json
   def index
-    if params[:category].blank?
+    #if params[:category].blank?
       @events = Event.all
-    else
-      @category_id = Category.find_by(name: params[:category]).id
-      @events = Event.where(:category_id => @category_id).order("created_at DESC")
-    end
+    #else
+     # @category_id = Category.find_by(name: params[:category]).id
+      #@events = Event.where(:category_id => @category_id).order("created_at DESC")
+    #end
   end
 
   # GET /my_events
