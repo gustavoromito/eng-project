@@ -55,13 +55,7 @@
       <button class="button" submit_tag>Comentar</button>
     <% end %>
 </div>
-<div class="comment_list">
-  <% @comments.each do |comment| %>
-    <%= comment.comment %> <br>
-      <%= comment.user.email %> <br>
-        <br>
-    <% end %>
-</div>
+
 
 
 <% if current_user %>
