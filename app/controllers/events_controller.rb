@@ -23,8 +23,8 @@ class EventsController < CommonController
 
   def unsubscribe
 
-    u = User.find_by params[:user_id]
-    e = Event.find_by params[:event_id]
+    u = User.find_by params[:user_id].to_i
+    e = Event.find_by params[:event_id].to_i
 
     interest = UserInterest.where(user: u, event: e).first
     return unless interest
