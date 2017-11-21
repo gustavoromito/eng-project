@@ -43,8 +43,28 @@
   <%= @event.address %>
 </p>
 
-<% if current_user %>
+<p>
+  <strong>Comentários do evento:</strong>
+</p>
+<div class="comment-section">
+  <%= form_tag create_comment_path, method: "event" do %>
+    <%= hidden_field_tag "id", @event.id %>
+      <div>
+        <%= text_area_tag :comment %>
+      </div>
+      <button class="button" submit_tag>Comentar</button>
+    <% end %>
+</div>
+<div class="comment_list">
+  <% @comments.each do |comment| %>
+    <%= comment.comment %> <br>
+      <%= comment.user.email %> <br>
+        <br>
+    <% end %>
+</div>
 
+
+<% if current_user %>
 <p>
   <strong>Usuario logado:</strong>
   <%= current_user.email %>
