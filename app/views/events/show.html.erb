@@ -58,11 +58,13 @@
 <!-- a div abaixo da um erro no travis, mas faz a função que deveria
 fazer no sistema -->
 <div class="comment_list">
-  <% @comments.each do |comment| %>
-    <%= comment.comment %> <br>
-      <%= comment.user.email %> <br>
-        <br>
+  <% if comments %>
+    <% @comments.each do |comment| %>
+      <%= comment.comment %> <br>
+        <%= comment.user.email %> <br>
+          <br>
     <% end %>
+  <% end %>
 </div>
 
 
