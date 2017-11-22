@@ -27,11 +27,9 @@ feature "avaliação de evento", type: :feature do
 		expect(page).to have_content('Nota')
 		expect(page).to have_content('Comentário')
 
-		fill_in 'Nota' 	, :with => 5;
 		fill_in "Comentário", :with => "Muito Bom!"
 		click_button 'Enviar'
 		# Finaliza redirecionando para a página do evento e mostrando o comentário
-		expect(page).to have_text(5)
 		expect(page).to have_text("Muito Bom!")
 	end
 end
