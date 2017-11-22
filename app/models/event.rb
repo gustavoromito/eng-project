@@ -1,4 +1,5 @@
 class Event < ApplicationRecord
+	acts_as_commentable
 	belongs_to :category, optional: true
 	geocoded_by :address
 	after_validation :geocode
