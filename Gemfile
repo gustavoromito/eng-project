@@ -42,6 +42,8 @@ group :development, :test do
 	gem "factory_bot_rails", "~> 4.0"
 	gem 'shoulda-matchers', '~> 3.1'
 	gem 'rspec-activemodel-mocks'
+	gem 'selenium-webdriver'
+	gem "capybara-webkit"
 end
 
 # database_cleaner is not required, but highly recommended
