@@ -6,6 +6,8 @@ require File.expand_path('../../config/environment', __FILE__)
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
 require 'support/factory_bot'
+require 'capybara/poltergeist'
+require 'phantomjs' 
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -24,6 +26,12 @@ require 'support/factory_bot'
 # Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 
+Capybara.register_driver :poltergeist do |app|
+    Capybara::Poltergeist::Driver.new(app, :phantomjs => Phantomjs.path)
+end
+
+Capybara.javascript_driver = :poltergeist
+
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
     with.test_framework :rspec
@@ -34,8 +42,6 @@ end
 # Checks for pending migrations before tests are run.
 # If you are not using ActiveRecord, you can remove this line.
 ActiveRecord::Migration.check_pending!
-
-Capybara.javascript_driver = :webkit
 
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures

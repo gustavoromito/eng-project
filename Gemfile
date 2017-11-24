@@ -45,7 +45,8 @@ end
 
 group :test do
 	gem 'cucumber-rails', :require => false
-	gem "capybara-webkit"
+	gem 'poltergeist'
+	gem 'phantomjs', :require => 'phantomjs/poltergeist'
 	# database_cleaner is not required, but highly recommended
 	gem 'database_cleaner'
 end
