@@ -7,5 +7,14 @@ class Event < ApplicationRecord
 	has_many :reviews
 	mount_uploader :image, AvatarUploader
 
+
+	def self.search(value)
+  		if value
+    		where('title || description || address LIKE ?', "%#{value}%")
+  		else
+    		all
+  		end
+	end
+
 end
 
