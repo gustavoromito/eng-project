@@ -1,0 +1,3 @@
+class Merit < ApplicationRecord
+
+end
