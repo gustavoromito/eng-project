@@ -142,12 +142,9 @@
           score   = (that.opt.half || that.opt.precision) ? that.self.data('score') : (this.alt || $(this).data('alt'));
 
         if (execute || execute === undefined) {
-          if (that.opt.half && !that.opt.precision) {
-            score = methods._roundHalfScore.call(that, score);
-          }
-
           methods._apply.call(that, score);
         }
+        
       });
     },
 
