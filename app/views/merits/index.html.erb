@@ -1,16 +1,20 @@
+<%= stylesheet_link_tag "merits" %>
+
+<div class="header">
+  <h1>Buddy Conquistas!</h1>
+</div>
+
 <% @merits.each do |m| %>
-	<div class="row">
-		<div class="col-sm">
-			<%= m.name %>
-		</div>
-		<div class="col-sm">
-			<%= m.achievement %>		
-		</div>
-		<div class="col-sm">
-			<%= m.points %>
-		</div>
-		<div class="col-sm">
-			<%= image_tag m.image %>
-		</div>
+
+	<div  class="col-6 menu">
+		<ul>
+			<li>
+				<ul> <%= image_tag m.image %> </ul>
+				<ul> Nome: <%= m.name %> </ul>
+				<ul> Como Obter: <%= m.achievement %> </ul> 		
+				<ul> Buddy Points: +<%= m.points %> </ul>
+			</li>
+		</ul>
 	</div>
+
 <% end %>
