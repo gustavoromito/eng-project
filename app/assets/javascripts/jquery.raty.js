@@ -9,7 +9,7 @@
  *
  */
 
-(function($) {
+(function () {
   'use strict';
 
   var methods = {
@@ -76,37 +76,7 @@
     },
 
     _adjustHints: function() {
-      if (!this.opt.hints) {
-        this.opt.hints = [];
-      }
 
-      if (!this.opt.halfShow && !this.opt.half) {
-        return;
-      }
-
-      var steps = this.opt.precision ? 10 : 2;
-
-      for (var i = 0; i < this.opt.number; i++) {
-        var group = this.opt.hints[i];
-
-        if (Object.prototype.toString.call(group) !== '[object Array]') {
-          group = [group];
-        }
-
-        this.opt.hints[i] = [];
-
-        for (var j = 0; j < steps; j++) {
-          var
-            hint = group[j],
-            last = group[group.length - 1];
-
-          if (last === undefined) {
-            last = null;
-          }
-
-          this.opt.hints[i][j] = hint === undefined ? last : hint;
-        }
-      }
     },
 
     _adjustNumber: function() {
@@ -295,7 +265,6 @@
       if (this.opt.starType === 'img') {
         cancel.attr({ src: icon, alt: 'x' });
       } else {
-        // TODO: use $.data
         cancel.attr('data-alt', 'x').addClass(icon);
       }
 
@@ -321,7 +290,7 @@
           attrs = { alt: i, src: this.opt.path + this.opt[name] };
 
         if (this.opt.starType !== 'img') {
-          attrs = { 'data-alt': i, 'class': attrs.src }; // TODO: use $.data.
+          attrs = { 'data-alt': i, 'class': attrs.src };
         }
 
         attrs.title = methods._getHint.call(this, i);
@@ -406,30 +375,7 @@
     },
 
     _getHint: function(score, evt) {
-      if (score !== 0 && !score) {
-        return this.opt.noRatedMsg;
-      }
 
-      var
-        decimal = methods._getFirstDecimal.call(this, score),
-        integer = Math.ceil(score),
-        group   = this.opt.hints[(integer || 1) - 1],
-        hint    = group,
-        set     = !evt || this.move;
-
-      if (this.opt.precision) {
-        if (set) {
-          decimal = decimal === 0 ? 9 : decimal - 1;
-        }
-
-        hint = group[decimal];
-      } else if (this.opt.halfShow || this.opt.half) {
-        decimal = set && decimal === 0 ? 1 : decimal > 5 ? 1 : 0;
-
-        hint = group[decimal];
-      }
-
-      return hint === '' ? '' : hint || score;
     },
 
     _getWidth: function() {
@@ -481,29 +427,7 @@
     },
 
     _roundStars: function(score, evt) {
-      var
-        decimal = (score % 1).toFixed(2),
-        name ;
-
-      if (evt || this.move) {
-        name = decimal > 0.5 ? 'starOn' : 'starHalf';
-      } else if (decimal > this.opt.round.down) { // Up: [x.76 .. x.99]
-        name = 'starOn';
-
-        if (this.opt.halfShow && decimal < this.opt.round.up) { // Half: [x.26 .. x.75]
-          name = 'starHalf';
-        } else if (decimal < this.opt.round.full) { // Down: [x.00 .. x.5]
-          name = 'starOff';
-        }
-      }
-
-      if (name) {
-        var
-          icon = this.opt[name],
-          star = this.stars[Math.ceil(score) - 1];
-
-        methods._setIcon.call(this, star, icon);
-      } // Full down: [x.00 .. x.25]
+      
     },
 
     _setIcon: function(star, icon) {
@@ -533,35 +457,7 @@
     },
 
     _target: function(score, evt) {
-      if (this.opt.target) {
-        var target = $(this.opt.target);
 
-        if (!target.length) {
-          methods._error.call(this, 'Target selector invalid or missing!');
-        }
-
-        var mouseover = evt && evt.type === 'mouseover';
-
-        if (score === undefined) {
-          score = this.opt.targetText;
-        } else if (score === null) {
-          score = mouseover ? this.opt.cancelHint : this.opt.targetText;
-        } else {
-          if (this.opt.targetType === 'hint') {
-            score = methods._getHint.call(this, score, evt);
-          } else if (this.opt.precision) {
-            score = parseFloat(score).toFixed(1);
-          }
-
-          var mousemove = evt && evt.type === 'mousemove';
-
-          if (!mouseover && !mousemove && !this.opt.targetKeep) {
-            score = this.opt.targetText;
-          }
-        }
-
-        methods._setTarget.call(this, target, score);
-      }
     },
 
     _turnOn: function(i, score) {
@@ -576,9 +472,7 @@
 
       this.self.data('readonly', false);
 
-      for (var i = 0; i < this.opt.number; i++) {
-        this.stars[i].title = methods._getHint.call(this, i + 1);
-      }
+      methods._resetTitle.call();
 
       if (this.cancel) {
         this.cancel.css('display', '');
@@ -760,4 +654,4 @@
     targetText:   '',
     targetType:   'hint'
   };
-})(jQuery);
+}(jQuery));
