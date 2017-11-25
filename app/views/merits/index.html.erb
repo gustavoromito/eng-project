@@ -1,0 +1,16 @@
+<% @merits.each do |m| %>
+	<div class="row">
+		<div class="col-sm">
+			<%= m.name %>
+		</div>
+		<div class="col-sm">
+			<%= m.achievement %>		
+		</div>
+		<div class="col-sm">
+			<%= m.points %>
+		</div>
+		<div class="col-sm">
+			<%= image_tag m.image %>
+		</div>
+	</div>
+<% end %>

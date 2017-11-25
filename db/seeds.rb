@@ -8,3 +8,4 @@
 
 # Criando as Categorias
 categories = Category.create([{name: "Restaurante"}, {name: "Baladinha"}, {name: "Ar Livre"}, {name: "Artes"}, {name: "Jogos online"}])
+merits = Merit.create(name: "Primeiro Rôle", points: 3, achievement: "Buddy + 1", image: Rails.root.join("app/assets/images/002-medal-1.png").open)
