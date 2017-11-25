@@ -22,16 +22,17 @@ feature "avaliação de evento", type: :feature do
 	end
 
 	# Cenário: Analisar o evento com um rate e um comentário
-	scenario "Realizar a review do evento" do
+	scenario "Realizar a review do evento", js: true do
 		click_link 'Avaliar Evento'
 		expect(page).to have_content('Nota')
 		expect(page).to have_content('Comentário')
 
-		fill_in 'Nota' 	, :with => 5;
+		page.execute_script("$('#rate-form').raty({
+			scoreName: 'review[rate]',
+			score: 5})")
 		fill_in "Comentário", :with => "Muito Bom!"
 		click_button 'Enviar'
 		# Finaliza redirecionando para a página do evento e mostrando o comentário
-		expect(page).to have_text(5)
 		expect(page).to have_text("Muito Bom!")
 	end
 end

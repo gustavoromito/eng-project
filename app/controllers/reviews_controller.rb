@@ -5,6 +5,9 @@ class ReviewsController < ApplicationController
 		@review = Review.new
 	end
 
+	def show
+	end
+
 	def create
 		@review = Review.new(review_params)
 		@review.event_id = @event.id

@@ -38,14 +38,20 @@ gem 'jbuilder'
 group :development, :test do
 	#specs
 	gem 'rspec-rails', '~> 3.6'
-	gem 'cucumber-rails', :require => false
 	gem "factory_bot_rails", "~> 4.0"
 	gem 'shoulda-matchers', '~> 3.1'
 	gem 'rspec-activemodel-mocks'
 end
 
-# database_cleaner is not required, but highly recommended
-gem 'database_cleaner'
+group :test do
+	gem 'cucumber-rails', :require => false
+	gem 'poltergeist'
+	gem 'phantomjs', :require => 'phantomjs/poltergeist'
+	# database_cleaner is not required, but highly recommended
+	gem 'database_cleaner'
+end
+
+
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

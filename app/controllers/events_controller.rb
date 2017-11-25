@@ -10,6 +10,9 @@ class EventsController < CommonController
       @category_id = Category.find_by(name: params[:category]).id
       @events = Event.where(:category_id => @category_id).order("created_at DESC")
     end
+
+    # Comando de Buscas
+    @events = Event.search(params[:search])
   end
 
   # GET /my_events
@@ -102,6 +105,6 @@ class EventsController < CommonController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:image, :title, :description, :start_time, :end_time, :latitude, :longitude, :address, :category_id)
+      params.require(:event).permit(:image, :title, :description, :start_time, :end_time, :latitude, :longitude, :address, :category_id, :search)
     end
 end

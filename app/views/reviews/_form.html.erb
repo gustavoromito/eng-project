@@ -1,8 +1,7 @@
 <%= form_for([@event, @event.reviews.build]) do |f| %>
-
-	<div class="field">
-		<%= f.label 'Nota' %><br>
-			<%= f.number_field :rate, :id => "Nota" %>
+	
+	<div id="rate-form">
+		<label>Nota</label>
 	</div>
 
 	<div class="field">
@@ -14,3 +13,5 @@
 		<%= f.button 'Enviar', :value => :submit %>
 	</div>
 <% end %>
+
+<%= render 'raty' %>
