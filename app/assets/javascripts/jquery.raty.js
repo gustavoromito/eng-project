@@ -141,10 +141,6 @@
           execute = true,
           score   = (that.opt.half || that.opt.precision) ? that.self.data('score') : (this.alt || $(this).data('alt'));
 
-        if (that.opt.click) {
-          execute = that.opt.click.call(that, +score, evt);
-        }
-
         if (execute || execute === undefined) {
           if (that.opt.half && !that.opt.precision) {
             score = methods._roundHalfScore.call(that, score);
