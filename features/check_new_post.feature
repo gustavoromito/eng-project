@@ -4,6 +4,8 @@
 Funcionalidade: Criação de um post de usuário
 
 Cenário: O usuário vai fazer um novo post na sua página
+	Dado que sou um usuário válido
+	E que estou logado na minha conta
 	Quando eu vou para a página de posts
 	E clico em "New Post"
 	Então eu vou para a página de criação de post

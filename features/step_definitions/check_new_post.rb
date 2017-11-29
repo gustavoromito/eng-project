@@ -1,5 +1,16 @@
 # encoding: utf-8
 
+Dado(/^que sou um usuário válido$/) do
+  @user = FactoryBot.create(:user)
+end
+
+Dado(/^que estou logado na minha conta$/) do
+  visit '/devise_scope/users/sign_in'
+  fill_in "Email", :with => @user.email
+  fill_in "Password", :with => @user.password
+  click_button "Entrar"
+end
+
 Quando(/^eu vou para a página de posts$/) do
   visit '/posts'
 end
@@ -13,11 +24,11 @@ Então(/^eu vou para a página de criação de post$/) do
 end
 
 Então(/^faço um post com o contéudo de "([^"]*)" e clico em "([^"]*)"$/) do |arg1, arg2|
-  post = FactoryBot.create(:post, content: arg1) #Overide do valor padrão para adequar ao teste
+  fill_in "Status", :with => arg1
   click_button arg2
 end
 
 Então(/^quando eu visito a página de posts novamente o meu post está listado como um dos posts$/) do
-  visit '/posts'
+  Capybara.ignore_hidden_elements = false
   expect(page).to have_content("Bom dia")
 end
