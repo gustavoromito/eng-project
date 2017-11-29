@@ -1,9 +1,5 @@
 # encoding: utf-8
 
-Quando /^eu vou para a página de eventos$/ do
-	visit "/events"
-end
-
 E /^clicar em "New Event"$/ do
   click_link('New Event')
 end

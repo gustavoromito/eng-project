@@ -9,6 +9,7 @@ end
 
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 # Use SCSS for stylesheets
@@ -78,7 +79,6 @@ gem 'tzinfo-data', '~> 1.2017', '>= 1.2017.2'
 gem 'listen', '~> 3.1', '>= 3.1.5'
 
 gem 'bootstrap-sass'
-gem 'rails_12factor'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
 
