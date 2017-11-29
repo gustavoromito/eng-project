@@ -1,11 +1,5 @@
 require 'rails_helper'
 
-# Builds and saves an Associate and a Instance : create()
-
-# Builds and saves an Associate, 
-# and then builds but does not save a Instance : build()
-
-
 RSpec.describe Post do
 	describe "atributos" do
 		it "tem um contéudo/mensagem" do

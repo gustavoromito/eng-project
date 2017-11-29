@@ -30,9 +30,9 @@ class PostsController < CommonController
     post.user = current_user
     end
     if @post.save
-      redirect_to root_path
+      redirect_to posts_path
     else
-      redirect_to root_path, notice: @post.errors.full_messages.first
+      redirect_to posts_path, notice: @post.errors.full_messages.first
     end
   end
 

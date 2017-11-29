@@ -1,0 +1,12 @@
+# enconding: utf-8
+# language: pt
+
+Funcionalidade: Seleciona Evento por Categoria
+
+	Cenário: Usuário pode selecionar eventos através da categoria
+	Dado que sou um usuário válido
+	E que estou logado na minha conta
+	Quando eu vou para a página de eventos
+	Dado que exista um evento válido com a categoria 'Balada'
+	E clico no link com o nome 'Balada'
+	Então eu vejo eventos cuja a categoria é 'Balada'
