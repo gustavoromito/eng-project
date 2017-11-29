@@ -1,14 +1,14 @@
 # encoding: utf-8
 
 Dado(/^que sou um usuário válido$/) do
-  @user = FactoryBot.create(:user)
+  @user = User.create(:email => 'person1@example.com', :password => 't123456')
 end
 
 Dado(/^que estou logado na minha conta$/) do
   visit '/devise_scope/users/sign_in'
   fill_in "Email", :with => @user.email
   fill_in "Password", :with => @user.password
-  click_button "Entrar"
+  click_button "Log In"
 end
 
 Quando(/^eu vou para a página de posts$/) do

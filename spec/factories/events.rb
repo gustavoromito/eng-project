@@ -5,5 +5,6 @@ FactoryBot.define do
 		end
 		association :category
 		title "Titulo do Evento"
+		category_id 1
 	end
 end

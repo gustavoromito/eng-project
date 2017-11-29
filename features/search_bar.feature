@@ -9,5 +9,5 @@ Funcionalidade: Barra de Pesquisa
 		E que estou logado na minha conta
 		Quando eu quero encontrar um evento pelo nome dele na página de eventos
 		Dado que há um evento com nome 'Baladinha'
-		Quando eu insito 'Baladinha' na barra de pesquisa e aperto 'Buscar'
+		Quando eu insiro 'Baladinha' na barra de pesquisa e aperto 'Buscar'
 		Então eu espero ver 'Baladinha' na página de eventos
