@@ -50,7 +50,6 @@
 
       methods._bindOver.call(this);
       methods._bindClick.call(this);
-      methods._bindOut.call(this);
     },
 
     _bindClick: function() {
