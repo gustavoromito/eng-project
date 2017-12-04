@@ -47,8 +47,8 @@ class EventsController < CommonController
   # GET /events/1
   # GET /events/1.json
   def show
-    @event = Event.find_by(id: params[:id])
-    @comments = @event.comments.all
+   # @event = Event.find_by(id: params[:id])
+   # @comments = @event.comments.all
   end
 
   # GET /events/new

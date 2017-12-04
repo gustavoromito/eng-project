@@ -43,6 +43,8 @@
   <%= @event.address %>
 </p>
 
+<%
+=begin %>
 <p>
   <strong>Comentários do evento:</strong>
 </p>
@@ -55,18 +57,15 @@
       <button class="button" submit_tag>Comentar</button>
     <% end %>
 </div>
-<!-- a div abaixo da um erro no travis, mas faz a função que deveria
-fazer no sistema -->
 <div class="comment_list">
-  <% if @comment %>
     <% @comments.each do |comment| %>
       <%= comment.comment %> <br>
         <%= comment.user.email %> <br>
           <br>
     <% end %>
-  <% end %>
 </div>
-
+<%
+=end %>
 
 <% if current_user %>
 <p>
