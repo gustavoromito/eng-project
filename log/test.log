@@ -36659,3 +36659,688 @@ Processing by PostsController#index as HTML
   Rendered layouts/_navbar.html.erb (1.2ms)
 Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.5ms)
   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by AboutsController#index as HTML
+  Rendering abouts/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered abouts/index.html.erb within layouts/application (0.6ms)
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered events/new.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 3.1ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "events"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by EventsController#my_events as HTML
+  Rendering events/my_events.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered events/my_events.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person1@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:13.508030"], ["updated_at", "2017-12-04 22:52:13.508030"], ["email", "person1@example.com"], ["encrypted_password", "$2a$04$Jg0BQHDBSJF7dcPhnzkHQ.Q5mHTbbKTygKOtlv9j3sA.8zKndQW9C"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Categoria1"], ["created_at", "2017-12-04 22:52:13.520454"], ["updated_at", "2017-12-04 22:52:13.520454"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("id", "title", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?)[0m  [["id", 1], ["title", "Titulo do Evento"], ["created_at", "2017-12-04 22:52:13.528087"], ["updated_at", "2017-12-04 22:52:13.528087"], ["category_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests" WHERE "user_interests"."user_id" = 1 AND "user_interests"."event_id" = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "user_interests" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["event_id", 1], ["created_at", "2017-12-04 22:52:13.548118"], ["updated_at", "2017-12-04 22:52:13.548118"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests"[0m
+Processing by EventsController#unsubscribe as JSON
+  Parameters: {"user_id"=>"1", "event_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUserInterest Load (0.1ms)[0m  [1m[34mSELECT  "user_interests".* FROM "user_interests" WHERE "user_interests"."user_id" = 1 AND "user_interests"."event_id" = 1 ORDER BY "user_interests"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "user_interests" WHERE "user_interests"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/events/1
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person2@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:13.565288"], ["updated_at", "2017-12-04 22:52:13.565288"], ["email", "person2@example.com"], ["encrypted_password", "$2a$04$v5B9dJ4VCN1C8v47nEyLEeZ4XtinL.ag/Ii5wGES5n5635jDrIrwu"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Categoria2"], ["created_at", "2017-12-04 22:52:13.567185"], ["updated_at", "2017-12-04 22:52:13.567185"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("id", "title", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?)[0m  [["id", 2], ["title", "Titulo do Evento"], ["created_at", "2017-12-04 22:52:13.568602"], ["updated_at", "2017-12-04 22:52:13.568602"], ["category_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by EventsController#unsubscribe as JSON
+  Parameters: {"user_id"=>"1", "event_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserInterest Load (0.1ms)[0m  [1m[34mSELECT  "user_interests".* FROM "user_interests" WHERE "user_interests"."user_id" = 1 AND "user_interests"."event_id" = 2 ORDER BY "user_interests"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+No template found for EventsController#unsubscribe, rendering head :no_content
+Completed 204 No Content in 32ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person3@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:13.606905"], ["updated_at", "2017-12-04 22:52:13.606905"], ["email", "person3@example.com"], ["encrypted_password", "$2a$04$S/v9U.dik1OkpDkxKWW99ulLCvXTjsZVEVrfZmppq5HNJMR1PnfYW"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by MeritsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering merits/index.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered merits/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person4@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:13.616907"], ["updated_at", "2017-12-04 22:52:13.616907"], ["email", "person4@example.com"], ["encrypted_password", "$2a$04$Z84rgtlArKJQ0llcyXY3xuK6LRIbPHsUZ5TRIphQZ9m/QUDeH.XaO"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by MeritsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering merits/index.html.erb within layouts/application
+  Rendered merits/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Processing by MeritsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by MeritsController#index as HTML
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Categoria3"], ["created_at", "2017-12-04 22:52:13.637463"], ["updated_at", "2017-12-04 22:52:13.637463"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("id", "title", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?)[0m  [["id", 3], ["title", "Titulo do Evento"], ["created_at", "2017-12-04 22:52:13.638993"], ["updated_at", "2017-12-04 22:52:13.638993"], ["category_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person5@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:13.642737"], ["updated_at", "2017-12-04 22:52:13.642737"], ["email", "person5@example.com"], ["encrypted_password", "$2a$04$bpNB6R345y28xKl0mYwXFug10N3UfQrGCD8TYRuf15c98qImYyGgC"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UserInterestController#create as JSON
+  Parameters: {"event_id"=>"3", "user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests" WHERE "user_interests"."user_id" = 1 AND "user_interests"."event_id" = 3[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "user_interests" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["event_id", 3], ["created_at", "2017-12-04 22:52:13.646861"], ["updated_at", "2017-12-04 22:52:13.646861"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/events/3
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Categoria4"], ["created_at", "2017-12-04 22:52:13.651630"], ["updated_at", "2017-12-04 22:52:13.651630"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("id", "title", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?)[0m  [["id", 4], ["title", "Titulo do Evento"], ["created_at", "2017-12-04 22:52:13.654036"], ["updated_at", "2017-12-04 22:52:13.654036"], ["category_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by UserInterestController#create as JSON
+  Parameters: {"event_id"=>"4", "user_id"=>"0"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests" WHERE "user_interests"."user_id" IS NULL AND "user_interests"."event_id" = 4[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Redirected to http://test.host/events/4
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered users/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-12-04 20:52:13 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 187ms (Views: 180.5ms | ActiveRecord: 0.0ms)
+Started GET "/abouts" for 127.0.0.1 at 2017-12-04 20:52:13 -0200
+Processing by AboutsController#index as HTML
+  Rendering abouts/index.html.erb within layouts/application
+  Rendered abouts/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person6@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:13.887210"], ["updated_at", "2017-12-04 22:52:13.887210"], ["email", "person6@example.com"], ["encrypted_password", "$2a$04$P9xQwQwv7St6Nx38xnAtquS9UMRQf4Gzkieu0TxOntcmxh4dKncwu"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Categoria5"], ["created_at", "2017-12-04 22:52:13.890016"], ["updated_at", "2017-12-04 22:52:13.890016"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("id", "title", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?)[0m  [["id", 5], ["title", "Titulo do Evento"], ["created_at", "2017-12-04 22:52:13.892346"], ["updated_at", "2017-12-04 22:52:13.892346"], ["category_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/events/5" for 127.0.0.1 at 2017-12-04 20:52:14 -0200
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-12-04 22:52:14.154633"], ["sign_in_count", 1], ["current_sign_in_at", "2017-12-04 22:52:14.153940"], ["last_sign_in_at", "2017-12-04 22:52:14.153940"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."event_id" = ?[0m  [["event_id", 5]]
+  Rendered collection of templates [0 times] (0.0ms)
+  [1m[36mUserInterest Load (0.1ms)[0m  [1m[34mSELECT "user_interests".* FROM "user_interests" WHERE "user_interests"."event_id" = ?[0m  [["event_id", 5]]
+  Rendered events/show.html.erb within layouts/application (15.8ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.6ms)
+Started GET "/assets/application-2d0baf09ef468e921e02cf21147d83136b37372c7548733e623fb19001e091ce.css" for 127.0.0.1 at 2017-12-04 20:52:14 -0200
+Started GET "/assets/application-315899e6b7b088c30dcef33d18f1b15ac24f17a5c2d5c9237082bb9139ab1c36.js" for 127.0.0.1 at 2017-12-04 20:52:14 -0200
+Started GET "/assets/letter-b.png" for 127.0.0.1 at 2017-12-04 20:52:14 -0200
+Started GET "/assets/fallback/default_event-5ae52faaf1e3435e015863bef9bd27ddc5c28f7dd5ee9d8630c553282a5729b4.jpg" for 127.0.0.1 at 2017-12-04 20:52:14 -0200
+Started GET "/assets/social-share-button/twitter-7b64ce0117a85c5d52ed45c27707af61d9b0e0d590284baa287cfe87867b9ae1.svg" for 127.0.0.1 at 2017-12-04 20:52:14 -0200
+Started GET "/assets/social-share-button/facebook-03210e1663ee772e93ed5d344cdb36657b68342821aaebe982f2f984915990b3.svg" for 127.0.0.1 at 2017-12-04 20:52:14 -0200
+Started GET "/assets/social-share-button/email-7067143cbe69d9d8cf25e67fda1a315d133c2b79074a09088bd712cc5c81135d.svg" for 127.0.0.1 at 2017-12-04 20:52:14 -0200
+Started GET "/assets/social-share-button/telegram-a6b5607917f3e3efbcf35c3ed43356b05622fcfc533d2fbf5066621b78c1dbe4.svg" for 127.0.0.1 at 2017-12-04 20:52:14 -0200
+Started GET "/assets/social-share-button/google_plus-50c049fbb29cd3346f1bf9349017b644bcd00a53b56bd156728850f57bd85c0a.svg" for 127.0.0.1 at 2017-12-04 20:52:14 -0200
+Started POST "/user_interest.json?event_id=5&user_id=1" for 127.0.0.1 at 2017-12-04 20:52:15 -0200
+Processing by UserInterestController#create as JSON
+  Parameters: {"event_id"=>"5", "user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests" WHERE "user_interests"."user_id" = 1 AND "user_interests"."event_id" = 5[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "user_interests" ("user_id", "event_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["event_id", 5], ["created_at", "2017-12-04 22:52:15.175905"], ["updated_at", "2017-12-04 22:52:15.175905"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:44329/events/5
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+Started GET "/events/5" for 127.0.0.1 at 2017-12-04 20:52:15 -0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."event_id" = ?[0m  [["event_id", 5]]
+  Rendered collection of templates [0 times] (0.0ms)
+  [1m[36mUserInterest Load (0.1ms)[0m  [1m[34mSELECT "user_interests".* FROM "user_interests" WHERE "user_interests"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered events/show.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_navbar.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 1.0ms)
+Started GET "/assets/letter-b.png" for 127.0.0.1 at 2017-12-04 20:52:15 -0200
+Started GET "/my_events" for 127.0.0.1 at 2017-12-04 20:52:15 -0200
+Processing by EventsController#my_events as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUserInterest Load (0.2ms)[0m  [1m[34mSELECT "user_interests".* FROM "user_interests" WHERE "user_interests"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering events/my_events.html.erb within layouts/application
+  Rendered events/my_events.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar.html.erb (0.4ms)
+Completed 200 OK in 18ms (Views: 4.3ms | ActiveRecord: 0.6ms)
+Started GET "/assets/letter-b.png" for 127.0.0.1 at 2017-12-04 20:52:15 -0200
+Started GET "/events/5/reviews/new" for 127.0.0.1 at 2017-12-04 20:52:15 -0200
+Processing by ReviewsController#new as HTML
+  Parameters: {"event_id"=>"5"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_raty.html.erb (0.5ms)
+  Rendered reviews/_form.html.erb (8.2ms)
+  Rendered reviews/new.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 24ms (Views: 13.6ms | ActiveRecord: 0.4ms)
+Started GET "/assets/letter-b.png" for 127.0.0.1 at 2017-12-04 20:52:15 -0200
+Started GET "/assets/star-off.png" for 127.0.0.1 at 2017-12-04 20:52:15 -0200
+Started GET "/events/5/reviews/undefinedstar-on.png" for 127.0.0.1 at 2017-12-04 20:52:15 -0200
+Processing by ReviewsController#show as PNG
+  Parameters: {"event_id"=>"5", "id"=>"undefinedstar-on"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+No template found for ReviewsController#show, rendering head :no_content
+Completed 204 No Content in 41ms (ActiveRecord: 0.1ms)
+Started POST "/events/5/reviews" for 127.0.0.1 at 2017-12-04 20:52:15 -0200
+Processing by ReviewsController#create as HTML
+  Parameters: {"utf8"=>"✓", "review"=>{"rate"=>"5", "commentary"=>"Muito Bom!"}, "button"=>"submit", "event_id"=>"5"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "reviews" ("rate", "commentary", "created_at", "updated_at", "user_id", "event_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rate", 5], ["commentary", "Muito Bom!"], ["created_at", "2017-12-04 22:52:15.862742"], ["updated_at", "2017-12-04 22:52:15.862742"], ["user_id", 1], ["event_id", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://127.0.0.1:44329/events/5
+Completed 302 Found in 14ms (ActiveRecord: 1.2ms)
+Started GET "/events/5" for 127.0.0.1 at 2017-12-04 20:52:15 -0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."event_id" = ?[0m  [["event_id", 5]]
+  Rendered events/_raty.html.erb (0.8ms)
+  Rendered collection of reviews/_review.html.erb [1 times] (3.2ms)
+  [1m[36mUserInterest Load (0.1ms)[0m  [1m[34mSELECT "user_interests".* FROM "user_interests" WHERE "user_interests"."event_id" = ?[0m  [["event_id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered events/show.html.erb within layouts/application (19.4ms)
+  Rendered layouts/_navbar.html.erb (0.3ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 1.0ms)
+Started GET "/assets/letter-b.png" for 127.0.0.1 at 2017-12-04 20:52:16 -0200
+Started GET "/assets/star-on.png" for 127.0.0.1 at 2017-12-04 20:52:16 -0200
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person7@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:16.418250"], ["updated_at", "2017-12-04 22:52:16.418250"], ["email", "person7@example.com"], ["encrypted_password", "$2a$04$iMVzWDreNJRpMNdN7SMufuRMHhNBjMTGILe3boyVW/PDSnd6Z/uqq"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "merits" ("name", "points", "achievement") VALUES (?, ?, ?)[0m  [["name", "MeritoDaFabrica1"], ["points", 5], ["achievement", "ConquistaDaFabrica"]]
+  [1m[35m (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merits" ("name", "points", "achievement") VALUES (?, ?, ?)[0m  [["name", "MeritoDaFabrica2"], ["points", 5], ["achievement", "ConquistaDaFabrica"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "merits" ("name", "points", "achievement") VALUES (?, ?, ?)[0m  [["name", "MeritoDaFabrica3"], ["points", 5], ["achievement", "ConquistaDaFabrica"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/merits" for 127.0.0.1 at 2017-12-04 20:52:16 -0200
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-12-04 22:52:16.449477"], ["sign_in_count", 1], ["current_sign_in_at", "2017-12-04 22:52:16.448877"], ["last_sign_in_at", "2017-12-04 22:52:16.448877"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by MeritsController#index as HTML
+  Rendering merits/index.html.erb within layouts/application
+  [1m[36mMerit Load (0.2ms)[0m  [1m[34mSELECT "merits".* FROM "merits"[0m
+  Rendered merits/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navbar.html.erb (0.2ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Categoria6"], ["created_at", "2017-12-04 22:52:16.503045"], ["updated_at", "2017-12-04 22:52:16.503045"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person8@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:16.533912"], ["updated_at", "2017-12-04 22:52:16.533912"], ["email", "person8@example.com"], ["encrypted_password", "$2a$04$ucrIDNcojBGcWgM4121exOPn71g0nw5zmVwd4LEodLUJB4N7cjjou"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person9@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:16.549061"], ["updated_at", "2017-12-04 22:52:16.549061"], ["email", "person9@example.com"], ["encrypted_password", "$2a$04$yahSV6R5QYEOvCnzM4DikOOb7NZHTnJGpn86Lqe/Q9JvYL.Acq6Xq"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "TestPost"], ["user_id", 1], ["created_at", "2017-12-04 22:52:16.552360"], ["updated_at", "2017-12-04 22:52:16.552360"]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person10@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:16.561125"], ["updated_at", "2017-12-04 22:52:16.561125"], ["email", "person10@example.com"], ["encrypted_password", "$2a$04$eEWr11dgfJ0byaq4xesacOVUgbw0xfds5YS7zAbTnFpc9hgMbbzrS"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Categoria7"], ["created_at", "2017-12-04 22:52:16.563635"], ["updated_at", "2017-12-04 22:52:16.563635"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("id", "title", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?)[0m  [["id", 6], ["title", "Titulo do Evento"], ["created_at", "2017-12-04 22:52:16.567667"], ["updated_at", "2017-12-04 22:52:16.567667"], ["category_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "reviews" ("rate", "commentary", "created_at", "updated_at", "user_id", "event_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rate", 5], ["commentary", "Muito Bom!"], ["created_at", "2017-12-04 22:52:16.571343"], ["updated_at", "2017-12-04 22:52:16.571343"], ["user_id", 1], ["event_id", 6]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person11@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:16.577716"], ["updated_at", "2017-12-04 22:52:16.577716"], ["email", "person11@example.com"], ["encrypted_password", "$2a$04$GulRhVO7LPg19EyAfCoW3uNn.Z1MOzAw2/KBf5Y18weXSV3N3X/sa"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Categoria8"], ["created_at", "2017-12-04 22:52:16.579983"], ["updated_at", "2017-12-04 22:52:16.579983"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("id", "title", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?)[0m  [["id", 7], ["title", "Titulo do Evento"], ["created_at", "2017-12-04 22:52:16.584366"], ["updated_at", "2017-12-04 22:52:16.584366"], ["category_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "reviews" ("rate", "commentary", "created_at", "updated_at", "user_id", "event_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rate", 5], ["commentary", "Muito Bom!"], ["created_at", "2017-12-04 22:52:16.587459"], ["updated_at", "2017-12-04 22:52:16.587459"], ["user_id", 1], ["event_id", 7]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person12@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:16.594563"], ["updated_at", "2017-12-04 22:52:16.594563"], ["email", "person12@example.com"], ["encrypted_password", "$2a$04$Xh.9WHejCvb5aNZfK5OInuvmqJaNBGxAbuOEryShDRmXpEuqknoju"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Categoria9"], ["created_at", "2017-12-04 22:52:16.597342"], ["updated_at", "2017-12-04 22:52:16.597342"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("id", "title", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?)[0m  [["id", 8], ["title", "Titulo do Evento"], ["created_at", "2017-12-04 22:52:16.601175"], ["updated_at", "2017-12-04 22:52:16.601175"], ["category_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "reviews" ("rate", "commentary", "created_at", "updated_at", "user_id", "event_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rate", 5], ["commentary", "Muito Bom!"], ["created_at", "2017-12-04 22:52:16.605198"], ["updated_at", "2017-12-04 22:52:16.605198"], ["user_id", 1], ["event_id", 8]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person13@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:16.611926"], ["updated_at", "2017-12-04 22:52:16.611926"], ["email", "person13@example.com"], ["encrypted_password", "$2a$04$D3CrUQdFq5eC0w/ApdHq8uJuanfSNSIEHYD1RfwIVAUGPwxXIhrVm"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Categoria10"], ["created_at", "2017-12-04 22:52:16.614400"], ["updated_at", "2017-12-04 22:52:16.614400"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("id", "title", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?)[0m  [["id", 9], ["title", "Titulo do Evento"], ["created_at", "2017-12-04 22:52:16.618377"], ["updated_at", "2017-12-04 22:52:16.618377"], ["category_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "reviews" ("rate", "commentary", "created_at", "updated_at", "user_id", "event_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rate", 5], ["commentary", "Muito Bom!"], ["created_at", "2017-12-04 22:52:16.622799"], ["updated_at", "2017-12-04 22:52:16.622799"], ["user_id", 1], ["event_id", 9]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person14@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:16.630793"], ["updated_at", "2017-12-04 22:52:16.630793"], ["email", "person14@example.com"], ["encrypted_password", "$2a$04$y/di1CCpKxwloz.AfztjuOBDEkvRP1hfNq6L1GxubS6NvccDAFaa2"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Categoria11"], ["created_at", "2017-12-04 22:52:16.635576"], ["updated_at", "2017-12-04 22:52:16.635576"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("id", "title", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?)[0m  [["id", 10], ["title", "Titulo do Evento"], ["created_at", "2017-12-04 22:52:16.639345"], ["updated_at", "2017-12-04 22:52:16.639345"], ["category_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "reviews" ("rate", "commentary", "created_at", "updated_at", "user_id", "event_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["rate", 5], ["commentary", "Muito Bom!"], ["created_at", "2017-12-04 22:52:16.641483"], ["updated_at", "2017-12-04 22:52:16.641483"], ["user_id", 1], ["event_id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person15@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:16.651832"], ["updated_at", "2017-12-04 22:52:16.651832"], ["email", "person15@example.com"], ["encrypted_password", "$2a$04$iow.vs/pLiwBv1z1HlYfaOjmm.oXayi64GbeIGgMygWK2EQ.ckJia"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests" WHERE "user_interests"."user_id" = 1 AND "user_interests"."event_id" IS NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Categoria12"], ["created_at", "2017-12-04 22:52:16.660491"], ["updated_at", "2017-12-04 22:52:16.660491"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("id", "title", "created_at", "updated_at", "category_id") VALUES (?, ?, ?, ?, ?)[0m  [["id", 11], ["title", "Titulo do Evento"], ["created_at", "2017-12-04 22:52:16.662421"], ["updated_at", "2017-12-04 22:52:16.662421"], ["category_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests" WHERE "user_interests"."user_id" IS NULL AND "user_interests"."event_id" = 11[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "valid_email@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "valid_email@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "MyString"], ["description", "MyText"], ["created_at", "2017-12-04 22:52:16.774441"], ["updated_at", "2017-12-04 22:52:16.774441"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering events/edit.html.erb
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/edit.html.erb (16.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title"], ["description", "MyText"], ["created_at", "2017-12-04 22:52:16.806299"], ["updated_at", "2017-12-04 22:52:16.806299"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title"], ["description", "MyText"], ["created_at", "2017-12-04 22:52:16.808265"], ["updated_at", "2017-12-04 22:52:16.808265"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering events/index.html.erb
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/_navbar.html.erb (1.1ms)
+  Rendered events/_searchform.html.erb (1.0ms)
+  Rendered events/index.html.erb (14.8ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendering events/new.html.erb
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/_form.html.erb (9.9ms)
+  Rendered events/new.html.erb (17.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Title"], ["description", "MyText"], ["created_at", "2017-12-04 22:52:16.857726"], ["updated_at", "2017-12-04 22:52:16.857726"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering events/show.html.erb
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."event_id" = ?[0m  [["event_id", 1]]
+  Rendered collection of templates [0 times] (0.0ms)
+  [1m[36mUserInterest Load (0.0ms)[0m  [1m[34mSELECT "user_interests".* FROM "user_interests" WHERE "user_interests"."event_id" = ?[0m  [["event_id", 1]]
+  Rendered events/show.html.erb (6.5ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person16@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:16.874807"], ["updated_at", "2017-12-04 22:52:16.874807"], ["email", "person16@example.com"], ["encrypted_password", "$2a$04$DhjpBhjaQc1PPDaiOxuJKehCgzWqQeodkCfED4YXfeB7dIORQEGZO"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "MyText"], ["user_id", 1], ["created_at", "2017-12-04 22:52:16.876685"], ["updated_at", "2017-12-04 22:52:16.876685"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering posts/edit.html.erb
+  Rendered posts/_form.html.erb (1.6ms)
+  Rendered posts/edit.html.erb (9.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person17@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:16.895709"], ["updated_at", "2017-12-04 22:52:16.895709"], ["email", "person17@example.com"], ["encrypted_password", "$2a$04$Wjno77vwzKh7AEy6Lm1dqekEkpE/q2evpxNIbgShSbx1kiNp7PJR6"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "MyText"], ["user_id", 1], ["created_at", "2017-12-04 22:52:16.898935"], ["updated_at", "2017-12-04 22:52:16.898935"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "posts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "MyText"], ["user_id", 1], ["created_at", "2017-12-04 22:52:16.900691"], ["updated_at", "2017-12-04 22:52:16.900691"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering posts/index.html.erb
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests" WHERE "user_interests"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered posts/index.html.erb (5.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person18@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:16.915107"], ["updated_at", "2017-12-04 22:52:16.915107"], ["email", "person18@example.com"], ["encrypted_password", "$2a$04$.ZQ705A9HqwPbJ0BJxeO0u.fB75lzS3EL3gyAdhLH0HeYatRrMMt6"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering posts/new.html.erb
+  Rendered posts/_form.html.erb (0.9ms)
+  Rendered posts/new.html.erb (1.8ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "person19@example.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "FName"], ["last_name", "LName"], ["created_at", "2017-12-04 22:52:16.926902"], ["updated_at", "2017-12-04 22:52:16.926902"], ["email", "person19@example.com"], ["encrypted_password", "$2a$04$HSsP0Zq8vuDaE2ytbddDQeHSJylJkJ6q0.iC..bEdfxqsqmc6aW.y"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "posts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "MyText"], ["user_id", 1], ["created_at", "2017-12-04 22:52:16.929757"], ["updated_at", "2017-12-04 22:52:16.929757"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering posts/show.html.erb
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."commentable_id" = ? AND "comments"."commentable_type" = ? ORDER BY created_at ASC[0m  [["commentable_id", 1], ["commentable_type", "Post"]]
+  Rendered posts/show.html.erb (2.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "email@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "MyString"], ["last_name", "MyString"], ["created_at", "2017-12-04 22:52:16.945217"], ["updated_at", "2017-12-04 22:52:16.945217"], ["email", "email@test.com"], ["encrypted_password", "$2a$04$hMLUWrYws2T35ifStfddsujcRtHjU92Rbh8.5Bx.6teOVoe15PjsK"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering users/edit.html.erb
+  Rendered users/_form.html.erb (3.6ms)
+  Rendered users/edit.html.erb (10.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "email2@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "First Name"], ["last_name", "Last Name"], ["created_at", "2017-12-04 22:52:16.965524"], ["updated_at", "2017-12-04 22:52:16.965524"], ["email", "email2@test.com"], ["encrypted_password", "$2a$04$Sg4UzIALnT82weYJNei8W.hcbKIfihrm79N1ZdFGHWzifhuge5YF."]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering users/index.html.erb
+  Rendered users/index.html.erb (1.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendering users/new.html.erb
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/new.html.erb (2.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "email@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "First Name"], ["last_name", "Last Name"], ["created_at", "2017-12-04 22:52:16.990969"], ["updated_at", "2017-12-04 22:52:16.990969"], ["email", "email@test.com"], ["encrypted_password", "$2a$04$i9sHDB/GMJk7SlAGqg2XWOdcdduQjXOfERwc8uzJFm1k4wjDap31y"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Rendering users/show.html.erb
+  Rendered users/show.html.erb (1.0ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
