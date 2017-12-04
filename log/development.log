@@ -8747,3 +8747,493 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 214ms (Views: 210.2ms | ActiveRecord: 1.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-12-04 18:48:26 -0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (11.5ms)
+Completed 200 OK in 2983ms (Views: 2969.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/devise_scope/users/sign_in" for 127.0.0.1 at 2017-12-04 18:48:31 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.7ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 99ms (Views: 79.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/devise_scope/users/sign_in" for 127.0.0.1 at 2017-12-04 18:48:35 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bAV7LZ6pstqn2Kyi6Vl9G6lINbOFmc/zeMox2iCKb1zRpMRZqoyUAcAdvFc1qq47waJMO0BkiLGjA1dLJpvZ7Q==", "user"=>{"email"=>"takashi_04@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "takashi_04@hotmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 15ms (ActiveRecord: 1.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bAV7LZ6pstqn2Kyi6Vl9G6lINbOFmc/zeMox2iCKb1zRpMRZqoyUAcAdvFc1qq47waJMO0BkiLGjA1dLJpvZ7Q==", "user"=>{"email"=>"takashi_04@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 236ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/devise_scope/users/auth/facebook" for 127.0.0.1 at 2017-12-04 18:48:39 -0200
+(facebook) Request phase initiated.
+Started GET "/devise_scope/users/auth/facebook" for 127.0.0.1 at 2017-12-04 18:48:39 -0200
+(facebook) Request phase initiated.
+Started GET "/" for 127.0.0.1 at 2017-12-04 18:48:59 -0200
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+Completed 200 OK in 85ms (Views: 83.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/devise_scope/users/sign_in" for 127.0.0.1 at 2017-12-04 18:49:01 -0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.2ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 101ms (Views: 97.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/devise_scope/users/sign_in" for 127.0.0.1 at 2017-12-04 18:49:04 -0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eSlT2q+iW9TpiG3ZQvT3CFPr2k/YaBlCzVZWi+/zMbHEiOyum4d9D45NfSyeByQoOwGjxx2VXgAWnzAa6eKHAA==", "user"=>{"email"=>"takashi_04@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "takashi_04@hotmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.4ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eSlT2q+iW9TpiG3ZQvT3CFPr2k/YaBlCzVZWi+/zMbHEiOyum4d9D45NfSyeByQoOwGjxx2VXgAWnzAa6eKHAA==", "user"=>{"email"=>"takashi_04@hotmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log In"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 213ms (Views: 71.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/devise_scope/users/sign_up" for 127.0.0.1 at 2017-12-04 18:49:06 -0200
+Processing by RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 98ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/devise_scope/users" for 127.0.0.1 at 2017-12-04 18:49:13 -0200
+Processing by RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TMkFWiFgMyHZKRnO/OIgVN4S/fgIa1oR9wOjpmwZgq1AbZJaPoMi3Q6zAFYcHBvQrKA8DMRukcZorfOtzC1L8g==", "user"=>{"email"=>"takashi_04@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cadastrar"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "takashi_04@hotmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?)[0m  [["created_at", "2017-12-04 20:49:13.474982"], ["updated_at", "2017-12-04 20:49:13.474982"], ["email", "takashi_04@hotmail.com"], ["encrypted_password", "$2a$11$Pqtg2Ajf5eUG0mGR.WAc1OwTAK269ibER8lERcZ6JtlRCwmjNmYqG"]]
+  [1m[35m (136.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-12-04 20:49:13.618141"], ["sign_in_count", 1], ["current_sign_in_at", "2017-12-04 20:49:13.615373"], ["last_sign_in_at", "2017-12-04 20:49:13.615373"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["id", 3]]
+  [1m[35m (141.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts
+Completed 302 Found in 473ms (ActiveRecord: 279.3ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-12-04 18:49:13 -0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests" WHERE "user_interests"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (37.9ms)
+  Rendered layouts/_navbar.html.erb (2.5ms)
+Completed 200 OK in 158ms (Views: 117.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/my_events" for 127.0.0.1 at 2017-12-04 18:49:27 -0200
+Processing by EventsController#my_events as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUserInterest Load (0.4ms)[0m  [1m[34mSELECT "user_interests".* FROM "user_interests" WHERE "user_interests"."user_id" = ?[0m  [["user_id", 3]]
+  Rendering events/my_events.html.erb within layouts/application
+  Rendered events/my_events.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 96ms (Views: 78.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2017-12-04 18:49:29 -0200
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/_navbar.html.erb (10.6ms)
+  Rendered events/_searchform.html.erb (0.8ms)
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (30.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (1.7ms)
+Completed 200 OK in 140ms (Views: 88.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2017-12-04 18:49:32 -0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."event_id" = ?[0m  [["event_id", 1]]
+  Rendered events/_raty.html.erb (0.3ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered collection of reviews/_review.html.erb [31 times] (13.2ms)
+  [1m[36mUserInterest Load (0.3ms)[0m  [1m[34mSELECT "user_interests".* FROM "user_interests" WHERE "user_interests"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered events/show.html.erb within layouts/application (86.6ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 163ms (Views: 148.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/my_events" for 127.0.0.1 at 2017-12-04 19:03:40 -0200
+Processing by EventsController#my_events as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUserInterest Load (0.5ms)[0m  [1m[34mSELECT "user_interests".* FROM "user_interests" WHERE "user_interests"."user_id" = ?[0m  [["user_id", 3]]
+  Rendering events/my_events.html.erb within layouts/application
+  Rendered events/my_events.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 153ms (Views: 117.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2017-12-04 19:03:41 -0200
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/_navbar.html.erb (10.8ms)
+  Rendered events/_searchform.html.erb (4.2ms)
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (52.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.2ms)
+Completed 200 OK in 167ms (Views: 159.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-04 19:03:43 -0200
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/_form.html.erb (15.5ms)
+  Rendered events/new.html.erb within layouts/application (16.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 86ms (Views: 80.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-04 19:03:54 -0200
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/_form.html.erb (37.7ms)
+  Rendered events/new.html.erb within layouts/application (43.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 134ms (Views: 126.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2017-12-04 19:24:58 -0200
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/_navbar.html.erb (11.1ms)
+  Rendered events/_searchform.html.erb (3.0ms)
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (44.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (2.7ms)
+Completed 200 OK in 155ms (Views: 145.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2017-12-04 19:24:59 -0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."event_id" = ?[0m  [["event_id", 1]]
+  Rendered events/_raty.html.erb (0.7ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered collection of reviews/_review.html.erb [31 times] (39.0ms)
+  [1m[36mUserInterest Load (0.2ms)[0m  [1m[34mSELECT "user_interests".* FROM "user_interests" WHERE "user_interests"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered events/show.html.erb within layouts/application (82.6ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 194ms (Views: 184.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-12-04 20:05:00 -0200
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "user_interests" WHERE "user_interests"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (34.9ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 151ms (Views: 141.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/my_events" for 127.0.0.1 at 2017-12-04 20:05:05 -0200
+Processing by EventsController#my_events as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUserInterest Load (0.2ms)[0m  [1m[34mSELECT "user_interests".* FROM "user_interests" WHERE "user_interests"."user_id" = ?[0m  [["user_id", 3]]
+  Rendering events/my_events.html.erb within layouts/application
+  Rendered events/my_events.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 86ms (Views: 65.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2017-12-04 20:05:38 -0200
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/_navbar.html.erb (10.0ms)
+  Rendered events/_searchform.html.erb (4.2ms)
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  Rendered events/index.html.erb within layouts/application (45.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 137ms (Views: 129.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2017-12-04 20:06:20 -0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."event_id" = ?[0m  [["event_id", 1]]
+  Rendered events/_raty.html.erb (0.5ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.2ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.2ms)
+  Rendered collection of reviews/_review.html.erb [31 times] (28.6ms)
+  [1m[36mUserInterest Load (0.1ms)[0m  [1m[34mSELECT "user_interests".* FROM "user_interests" WHERE "user_interests"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered events/show.html.erb within layouts/application (60.0ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 141ms (Views: 132.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2017-12-04 20:07:18 -0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."event_id" = ?[0m  [["event_id", 1]]
+  Rendered events/_raty.html.erb (0.7ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.2ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.1ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.2ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered events/_raty.html.erb (0.0ms)
+  Rendered collection of reviews/_review.html.erb [31 times] (35.5ms)
+  [1m[36mUserInterest Load (0.2ms)[0m  [1m[34mSELECT "user_interests".* FROM "user_interests" WHERE "user_interests"."event_id" = ?[0m  [["event_id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered events/show.html.erb within layouts/application (81.1ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 189ms (Views: 176.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2017-12-04 20:08:29 -0200
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered events/_form.html.erb (47.3ms)
+  Rendered events/new.html.erb within layouts/application (52.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered layouts/_navbar.html.erb (1.5ms)
+Completed 200 OK in 140ms (Views: 132.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/events" for 127.0.0.1 at 2017-12-04 20:08:32 -0200
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rxduZ+wP31ghl/Wbk78nhUzdHhRzCu+t3+wvLiYDY6c3pmHYGwnNVFPelJSwklS+nmyFrK1g/n7VmFJWE+D42A==", "category_id"=>"1", "event"=>{"title"=>"", "description"=>"", "start_time(1i)"=>"2017", "start_time(2i)"=>"12", "start_time(3i)"=>"4", "start_time(4i)"=>"22", "start_time(5i)"=>"08", "end_time(1i)"=>"2017", "end_time(2i)"=>"12", "end_time(3i)"=>"4", "end_time(4i)"=>"22", "end_time(5i)"=>"08", "latitude"=>"", "longitude"=>"", "address"=>""}, "commit"=>"Create Event"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "start_time", "end_time", "created_at", "updated_at", "address", "category_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["description", ""], ["start_time", "2017-12-04 22:08:00"], ["end_time", "2017-12-04 22:08:00"], ["created_at", "2017-12-04 22:08:32.566269"], ["updated_at", "2017-12-04 22:08:32.566269"], ["address", ""], ["category_id", 1]]
+  [1m[35m (144.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/events/5
+Completed 302 Found in 161ms (ActiveRecord: 144.8ms)
+
+
+Started GET "/events/5" for 127.0.0.1 at 2017-12-04 20:08:32 -0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."event_id" = ?[0m  [["event_id", 5]]
+  Rendered collection of templates [0 times] (0.0ms)
+  [1m[36mUserInterest Load (0.2ms)[0m  [1m[34mSELECT "user_interests".* FROM "user_interests" WHERE "user_interests"."event_id" = ?[0m  [["event_id", 5]]
+  Rendered events/show.html.erb within layouts/application (17.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 101ms (Views: 93.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/events/5" for 127.0.0.1 at 2017-12-04 20:09:15 -0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering events/show.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."event_id" = ?[0m  [["event_id", 5]]
+  Rendered collection of templates [0 times] (0.0ms)
+  [1m[36mUserInterest Load (0.2ms)[0m  [1m[34mSELECT "user_interests".* FROM "user_interests" WHERE "user_interests"."event_id" = ?[0m  [["event_id", 5]]
+  Rendered events/show.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 82ms (Views: 77.6ms | ActiveRecord: 0.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/underscore-min.map"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.4) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.4) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.4) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.4) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+rack (2.0.3) lib/rack/handler/webrick.rb:86:in `service'
+/home/raphael/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+/home/raphael/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+/home/raphael/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
