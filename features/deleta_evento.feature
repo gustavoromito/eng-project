@@ -7,6 +7,6 @@ Funcionalidade: Deletar Evento
 		Dado um usuário validado no sistema
 		E que esteja logado no site
 		E dado um evento que ja tenha sido criado anteriormente de titulo 'Festa no ape'
-    Então eu vou para a listagem dos eventos
+    	Então eu vou para a listagem dos eventos
 		E assim que eu clicar no texto 'Destroy'
-    Então o evento 'Festa no ape' sumirá
+    	Então o evento 'Festa no ape' sumirá
