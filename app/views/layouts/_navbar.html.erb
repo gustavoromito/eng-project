@@ -1,36 +1,35 @@
-
-<nav class="std-navbar navbar-inverse bg-primary">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-left" href="">
-          <img style="max-width:100px; margin-top: 10px; margin-right: -8px;" src="/assets/letter-b.png" width="30" height="30" alt="100">
-      </a>
-      <% if user_signed_in? %>
-      <%= link_to "BUDDY ME!", posts_path, class: "navbar-brand" %>
-      <% else %>
-      <%= link_to "BUDDY ME!", root_url, class: "navbar-brand" %>
-      <% end %> 
-    </div>
-    <div class="collapse navbar-collapse" id="navbar-top">
-      <ul class="nav navbar-nav navbar-right">
+  <nav class="std-navbar navbar-inverse bg-primary">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-top">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-left" href="">
+           <img style="max-width:100px; margin-top: 10px; margin-right: -8px;" src="/assets/letter-b.png" width="30" height="30" alt="100">
+        </a>
         <% if user_signed_in? %>
-          <li><a href="/posts">Perfil</a></li>
-          <li><a href="/my_events">Meus Eventos</a></li>
-          <li><a href="/events" >Eventos</a></li>
-          <li><%= link_to('Sair', destroy_user_session_path, method: :delete) %></li>
+        <%= link_to "BUDDY ME!", posts_path, class: "navbar-brand" %>
         <% else %>
-          <li><%= link_to 'Entrar', user_session_path %></li>
-          <li><%= link_to 'Cadastrar', new_user_registration_path %></li>
-          <li><a href="#">Contato</a></li>
-          <li><a href="/abouts">About</a></li>
-        <% end %>   
-      </ul>
+        <%= link_to "BUDDY ME!", root_url, class: "navbar-brand" %>
+        <% end %> 
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-top">
+        <ul class="nav navbar-nav navbar-right">
+          <% if user_signed_in? %>
+            <li><a href="/posts">Perfil</a></li>
+            <li><a href="/my_events">Meus Eventos</a></li>
+            <li><a href="/events" >Eventos</a></li>
+            <li><%= link_to('Sair', destroy_user_session_path, method: :delete) %></li>
+          <% else %>
+            <li><%= link_to 'Entrar', user_session_path %></li>
+            <li><%= link_to 'Cadastrar', new_user_registration_path %></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="/abouts">About</a></li>
+          <% end %>   
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
