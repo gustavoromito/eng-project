@@ -10,6 +10,7 @@ end
 
 E /^preencher o campo endereço com endereco: "Parque Ibirapuera"$/ do
  	fill_in "event[address]", :with => "Parque Ibirapuera"
+	@category = FactoryBot.create(:category)
 end
 
 E /^clicar em "Create Event"$/ do
@@ -21,6 +22,6 @@ Então /^o usuário vai para a página do evento para "(.*?)"$/ do |eve|
 end
 
 E /^a latitude esta preenchida com -23.5874162, e longitude: -46.6576336$/ do
-  assert page.has_field?(@event.latitude, with => '-23.5874162')
-  assert page.has_field?(@event.longitude, with => '-46.6576336')
+  page.should have_content '-23.5874162'
+	page.should have_content '-46.6576336'
 end

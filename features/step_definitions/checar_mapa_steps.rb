@@ -1,6 +1,10 @@
 # encoding: utf-8
 
-E /^clicar em "New Event"$/ do
+Quando /^Vou para a pagina dos eventos$/ do
+  visit '/events'
+end
+
+E /^clico no botao de "New Event"$/ do
   click_link('New Event')
 end
 
@@ -8,12 +12,13 @@ E /^preencher os campos latitude, longitude e endereço com: latitude: -23.58741
   fill_in "event[latitude]", :with => "-23.5874162"
  	fill_in "event[longitude]", :with => "-46.6576336"
  	fill_in "event[address]", :with => "Parque Ibirapuera"
+  @category = FactoryBot.create(:category)
 end
 
-E /^clicar em "Create Event"$/ do
+E /^clicar no botao de criar evento$/ do
   click_button('Create Event')
 end
 
-Então /^o usuário vai para a página do evento para "(.*?)"$/ do |eve|
+Então /^a pagina de eventos "(.*?)" existe$/ do |eve|
   	visit "/events/1"
 end
